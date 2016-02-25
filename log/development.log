@@ -212,3 +212,769 @@ Processing by UsersController#index as HTML
   [1m[36mUser Load (30.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
   Rendered users/index.html.erb within layouts/application (73.8ms)
 Completed 200 OK in 2468ms (Views: 2435.8ms | ActiveRecord: 30.7ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:05:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (9.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (50.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (344.6ms)
+Completed 200 OK in 8759ms (Views: 8280.8ms | ActiveRecord: 190.5ms)
+
+
+Started GET "/assets/scaffolds.self-116eb2b6dfd69c81d6d7fb8a32ce2d3cbcb3044c7e12bc709bf4fb0ab5aa1f09.css?body=1" for 10.0.80.54 at 2016-02-25 17:05:28 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:05:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:05:30 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:05:31 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:05:31 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:05:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:05:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:05:34 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:05:35 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:05:36 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:06:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (7.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 2067ms (Views: 2057.6ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:06:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:06:42 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:06:43 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:06:44 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:06:45 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-116eb2b6dfd69c81d6d7fb8a32ce2d3cbcb3044c7e12bc709bf4fb0ab5aa1f09.css?body=1" for 10.0.80.54 at 2016-02-25 17:06:46 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:06:47 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:06:48 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:06:48 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:06:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:08:18 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (7.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 2392ms (Views: 2382.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:08:21 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:08:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:08:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:08:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-116eb2b6dfd69c81d6d7fb8a32ce2d3cbcb3044c7e12bc709bf4fb0ab5aa1f09.css?body=1" for 10.0.80.54 at 2016-02-25 17:08:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:08:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:08:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:08:27 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:08:28 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:08:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:08:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 2235ms (Views: 2223.8ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:08:55 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:08:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:08:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:08:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-116eb2b6dfd69c81d6d7fb8a32ce2d3cbcb3044c7e12bc709bf4fb0ab5aa1f09.css?body=1" for 10.0.80.54 at 2016-02-25 17:08:58 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:08:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:00 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:02 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:02 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:09:17 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (28.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 2495ms (Views: 2463.2ms | ActiveRecord: 28.7ms)
+
+
+Started GET "/assets/scaffolds.self-116eb2b6dfd69c81d6d7fb8a32ce2d3cbcb3044c7e12bc709bf4fb0ab5aa1f09.css?body=1" for 10.0.80.54 at 2016-02-25 17:09:20 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:09:21 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:09:21 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:09:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:27 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:28 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:09:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (15.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 2232ms (Views: 2215.3ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:52 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:09:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-116eb2b6dfd69c81d6d7fb8a32ce2d3cbcb3044c7e12bc709bf4fb0ab5aa1f09.css?body=1" for 10.0.80.54 at 2016-02-25 17:09:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:09:55 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:09:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:58 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:09:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/1/edit" for 10.0.80.54 at 2016-02-25 17:10:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (8.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (537.1ms)
+  Rendered users/edit.html.erb within layouts/application (1099.4ms)
+Completed 200 OK in 3995ms (Views: 3635.5ms | ActiveRecord: 8.7ms)
+
+
+Started PATCH "/users/1" for 10.0.80.54 at 2016-02-25 17:10:21 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VYlthi59dpN5jyfTuq5v4lo2gi523ivWURQ5sXMmXJpjmauQOm3hBnBDZCWGoMyPI+bOkAyIGGPukZXM47OOZQ==", "user"=>{"name"=>"テスト社員", "birthday"=>"2015-06-15", "phone1"=>"080-1234-4567", "phone2"=>"", "post_number"=>"811-1111", "address"=>"福岡県福岡市博多区", "other"=>"要注意人物である。"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (32.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (147.1ms)[0m  [1mUPDATE "users" SET "other" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["other", "要注意人物である。"], ["updated_at", "2016-02-25 08:10:22.272237"], ["id", 1]]
+  [1m[35m (84.1ms)[0m  commit transaction
+Redirected to http://10.0.80.200:3000/users/1
+Completed 302 Found in 410ms (ActiveRecord: 264.2ms)
+
+
+Started GET "/users/1" for 10.0.80.54 at 2016-02-25 17:10:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (17.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 2044ms (Views: 2012.8ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:10:27 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (7.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 2028ms (Views: 2019.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:13:04 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (34.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 3065ms (Views: 3030.0ms | ActiveRecord: 34.1ms)
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:13:08 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:13:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-116eb2b6dfd69c81d6d7fb8a32ce2d3cbcb3044c7e12bc709bf4fb0ab5aa1f09.css?body=1" for 10.0.80.54 at 2016-02-25 17:13:10 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:13:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:13:12 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:13:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:13:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:13:14 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.0.80.54 at 2016-02-25 17:13:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:13:55 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (59.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (119.1ms)
+Completed 200 OK in 9997ms (Views: 9935.2ms | ActiveRecord: 59.8ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:14:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:14:10 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:14:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-116eb2b6dfd69c81d6d7fb8a32ce2d3cbcb3044c7e12bc709bf4fb0ab5aa1f09.css?body=1" for 10.0.80.54 at 2016-02-25 17:14:17 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:14:19 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:14:21 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:14:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:14:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.0.80.54 at 2016-02-25 17:14:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:16:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (6.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 3784ms (Views: 3754.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:16:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:16:31 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:16:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:16:34 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:16:36 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-116eb2b6dfd69c81d6d7fb8a32ce2d3cbcb3044c7e12bc709bf4fb0ab5aa1f09.css?body=1" for 10.0.80.54 at 2016-02-25 17:16:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:16:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:16:39 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:16:40 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:16:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:18:19 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (29.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 1917ms (Views: 1885.6ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:18:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-116eb2b6dfd69c81d6d7fb8a32ce2d3cbcb3044c7e12bc709bf4fb0ab5aa1f09.css?body=1" for 10.0.80.54 at 2016-02-25 17:18:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:18:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:18:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:18:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:18:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:18:27 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:18:28 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:18:28 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:18:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:19:50 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (53.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (77.7ms)
+Completed 200 OK in 4135ms (Views: 4078.2ms | ActiveRecord: 53.6ms)
+
+
+Started GET "/assets/scaffolds.self-374417ae0ad985de8c47b3ad2e149c4ab5f5a825076384bc99dfff3f3d6c88ba.css?body=1" for 10.0.80.54 at 2016-02-25 17:19:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:20:28 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (20.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 4329ms (Views: 4306.4ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:20:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:20:34 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-8e346233a2df359ae6557c55ae4dfad87af79e1bf2b2b221a98143b2b5078d8e.css?body=1" for 10.0.80.54 at 2016-02-25 17:20:34 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:20:35 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:20:36 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:20:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:20:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:20:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:20:39 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:20:39 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-25 17:23:48 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (9.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (55.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (459.8ms)
+Completed 200 OK in 12487ms (Views: 11378.4ms | ActiveRecord: 227.4ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:24:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:24:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:24:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-8e346233a2df359ae6557c55ae4dfad87af79e1bf2b2b221a98143b2b5078d8e.css?body=1" for 10.0.80.54 at 2016-02-25 17:24:14 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:24:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:24:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:24:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:24:17 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:24:19 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:24:20 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-25 17:24:44 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (495.5ms)
+  Rendered users/new.html.erb within layouts/application (961.7ms)
+Completed 200 OK in 3583ms (Views: 3580.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.80.54 at 2016-02-25 17:24:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6LKc1s0EGPju7lg2EUCdJ3ub6p8p65dKngvyUJan/hPeolrA2RSPbeciG8AtTj5KAkumIVO9pP8hjl4tBjIs7A==", "user"=>{"name"=>"", "birthday"=>"", "phone1"=>"", "phone2"=>"", "post_number"=>"", "address"=>"", "other"=>""}, "commit"=>"Create User"}
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 1.1ms)
+
+NoMethodError (undefined method `price' for #<User:0xb4955e48>):
+  app/controllers/users_controller.rb:30:in `block in create'
+  app/controllers/users_controller.rb:29:in `create'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (189.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (41.1ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (596.9ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-25 17:25:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (16.5ms)
+  Rendered users/new.html.erb within layouts/application (350.5ms)
+Completed 200 OK in 3451ms (Views: 3000.5ms | ActiveRecord: 193.0ms)
+
+
+Started GET "/assets/scaffolds.self-8e346233a2df359ae6557c55ae4dfad87af79e1bf2b2b221a98143b2b5078d8e.css?body=1" for 10.0.80.54 at 2016-02-25 17:26:04 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:26:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:26:06 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:26:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:26:08 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:26:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:26:10 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:26:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:26:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:26:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 10.0.80.54 at 2016-02-25 17:26:20 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fs2icZcvV6R/jpbA1HNSVHowxWpPekoWu4iFlGYXWzMg3WRngz/AMXZC1TboffE5A+CJ1DUseaMEDSnp9oKJzA==", "user"=>{"name"=>"", "birthday"=>"", "phone1"=>"", "phone2"=>"", "post_number"=>"", "address"=>"", "other"=>""}, "commit"=>"Create User"}
+  [1m[36m (10.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/_form.html.erb (37.6ms)
+  Rendered users/new.html.erb within layouts/application (162.7ms)
+Completed 200 OK in 3365ms (Views: 3094.4ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-25 17:30:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (40.5ms)
+  Rendered users/new.html.erb within layouts/application (574.8ms)
+Completed 200 OK in 5048ms (Views: 5040.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-25 17:30:12 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-25 17:30:14 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-8e346233a2df359ae6557c55ae4dfad87af79e1bf2b2b221a98143b2b5078d8e.css?body=1" for 10.0.80.54 at 2016-02-25 17:30:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-25 17:30:17 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-25 17:30:18 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-25 17:30:19 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-25 17:30:20 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-25 17:30:21 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-25 17:30:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-25 17:30:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 10.0.80.54 at 2016-02-25 17:30:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OiHuydbj6hLnzy1XErpwgkWAOH0X4P2lOJeosbkE3NgMMSjfwvN9h+4DbqEutNPvPFB0w222zhCHEgTMKZEOJw==", "user"=>{"name"=>"", "birthday"=>"", "phone1"=>"", "phone2"=>"", "post_number"=>"", "address"=>"", "other"=>""}, "commit"=>"Create User"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered users/_form.html.erb (111.1ms)
+  Rendered users/new.html.erb within layouts/application (572.9ms)
+Completed 200 OK in 5568ms (Views: 5040.0ms | ActiveRecord: 0.6ms)

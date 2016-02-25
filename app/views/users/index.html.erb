@@ -1,17 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<h1>Master Table</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Birthday</th>
-      <th>Phone1</th>
-      <th>Phone2</th>
-      <th>Post number</th>
-      <th>Address</th>
-      <th>Other</th>
+      <th>社員CD</th>
+      <th>社員名称</th>
+      <th>生年月日</th>
+      <th>電話番号1</th>
+      <th>電話番号2</th>
+      <th>郵便番号</th>
+      <th>住所</th>
+      <th>備考欄</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,6 +20,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.id %></td>
         <td><%= user.name %></td>
         <td><%= user.birthday %></td>
         <td><%= user.phone1 %></td>
