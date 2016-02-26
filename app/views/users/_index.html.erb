@@ -1,0 +1,15 @@
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.emp_id %></td>
+    <td><%= user.name %></td>
+    <td><%= (Date.today.strftime("%Y%m%d").to_i - user.birthday.strftime("%Y%m%d").to_i) / 10000 %>歳</td>
+    <td><%= user.phone1 %></td>
+    <td><%= user.phone2 %></td>
+    <td><%= user.post_number %></td>
+    <td><%= user.address %></td>
+    <td><%= user.other %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>

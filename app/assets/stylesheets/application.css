@@ -14,3 +14,7 @@
  *= require_tree .
  *= require_self
  */
+
+table.table tr.hv td {
+  background-color: #fff4f8;
+}

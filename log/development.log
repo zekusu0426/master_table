@@ -1865,3 +1865,1839 @@ Processing by UsersController#create as HTML
   Rendered users/_form.html.erb (20.0ms)
   Rendered users/new.html.erb within layouts/application (196.1ms)
 Completed 200 OK in 4082ms (Views: 3970.4ms | ActiveRecord: 22.7ms)
+  [1m[36m (47.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (47.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (9.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (107.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160226012806)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (119.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "emp_id" varchar, "name" varchar, "birthday" date, "phone1" varchar, "phone2" varchar, "post_number" varchar, "address" varchar, "other" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (10.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160226012806"]]
+  [1m[36m (50.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (8.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (30.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (9.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (1.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '0' LIMIT 1[0m
+  [1m[35mSQL (22.9ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "0"], ["name", "三浦 真央"], ["birthday", "1969-09-12"], ["phone1", "084-790-4895"], ["phone2", "032-223-6879"], ["post_number", "123-3005"], ["address", "東琴音郡"], ["created_at", "2016-02-26 02:29:49.189244"], ["updated_at", "2016-02-26 02:29:49.189244"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '1' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "1"], ["name", "佐藤 美桜"], ["birthday", "1987-01-08"], ["phone1", "07307-2-5089"], ["phone2", "018-258-7009"], ["post_number", "451-9098"], ["address", "楓市"], ["created_at", "2016-02-26 02:29:49.224485"], ["updated_at", "2016-02-26 02:29:49.224485"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '2' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "2"], ["name", "和田 翔"], ["birthday", "1985-08-04"], ["phone1", "03933-7-0326"], ["phone2", "086-240-5885"], ["post_number", "899-6417"], ["address", "北工藤市"], ["created_at", "2016-02-26 02:29:49.237898"], ["updated_at", "2016-02-26 02:29:49.237898"]]
+  [1m[36mUser Exists (1.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "3"], ["name", "前田 結衣"], ["birthday", "1963-03-26"], ["phone1", "02-8818-5975"], ["phone2", "06-5843-3359"], ["post_number", "125-9961"], ["address", "綾乃町"], ["created_at", "2016-02-26 02:29:49.249696"], ["updated_at", "2016-02-26 02:29:49.249696"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '4' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "4"], ["name", "柴田 結菜"], ["birthday", "1989-03-27"], ["phone1", "074-837-8468"], ["phone2", "048-702-9795"], ["post_number", "144-3503"], ["address", "井上郡"], ["created_at", "2016-02-26 02:29:49.262230"], ["updated_at", "2016-02-26 02:29:49.262230"]]
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '5' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "5"], ["name", "武田 愛美"], ["birthday", "1987-08-11"], ["phone1", "0496-73-6358"], ["phone2", "01965-3-7448"], ["post_number", "982-3391"], ["address", "武田町"], ["created_at", "2016-02-26 02:29:49.274285"], ["updated_at", "2016-02-26 02:29:49.274285"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '6' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "6"], ["name", "山本 結"], ["birthday", "1976-10-24"], ["phone1", "069-604-9886"], ["phone2", "0791-31-8030"], ["post_number", "328-1533"], ["address", "彩乃区"], ["created_at", "2016-02-26 02:29:49.286629"], ["updated_at", "2016-02-26 02:29:49.286629"]]
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '7' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "7"], ["name", "山崎 遥"], ["birthday", "1989-07-24"], ["phone1", "023-603-5401"], ["phone2", "0185-38-5128"], ["post_number", "173-6664"], ["address", "平野区"], ["created_at", "2016-02-26 02:29:49.297251"], ["updated_at", "2016-02-26 02:29:49.297251"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '8' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "8"], ["name", "太田 輝"], ["birthday", "1982-10-24"], ["phone1", "01-8575-2726"], ["phone2", "06-1985-8920"], ["post_number", "303-4342"], ["address", "西琴音区"], ["created_at", "2016-02-26 02:29:49.342145"], ["updated_at", "2016-02-26 02:29:49.342145"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '9' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "9"], ["name", "岡田 瑛太"], ["birthday", "1972-12-05"], ["phone1", "01-0032-2247"], ["phone2", "02-6535-3825"], ["post_number", "896-4660"], ["address", "北亮村"], ["created_at", "2016-02-26 02:29:49.408131"], ["updated_at", "2016-02-26 02:29:49.408131"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '10' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "10"], ["name", "田村 翔太"], ["birthday", "1981-06-26"], ["phone1", "08603-7-7470"], ["phone2", "04287-0-1138"], ["post_number", "905-2421"], ["address", "中美緒市"], ["created_at", "2016-02-26 02:29:49.455150"], ["updated_at", "2016-02-26 02:29:49.455150"]]
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '11' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "11"], ["name", "高橋 大輔"], ["birthday", "1967-11-15"], ["phone1", "04398-9-0539"], ["phone2", "0675-59-0300"], ["post_number", "769-6096"], ["address", "優奈村"], ["created_at", "2016-02-26 02:29:49.547336"], ["updated_at", "2016-02-26 02:29:49.547336"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '12' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "12"], ["name", "野村 遥"], ["birthday", "1969-01-20"], ["phone1", "09780-1-7672"], ["phone2", "0631-69-9648"], ["post_number", "493-7731"], ["address", "南近藤村"], ["created_at", "2016-02-26 02:29:49.560947"], ["updated_at", "2016-02-26 02:29:49.560947"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '13' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "13"], ["name", "石川 瑛太"], ["birthday", "1980-02-03"], ["phone1", "08-1344-2999"], ["phone2", "04139-9-9468"], ["post_number", "865-3207"], ["address", "近藤区"], ["created_at", "2016-02-26 02:29:49.577377"], ["updated_at", "2016-02-26 02:29:49.577377"]]
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '14' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "14"], ["name", "石川 優"], ["birthday", "1989-06-20"], ["phone1", "04428-2-6890"], ["phone2", "086-597-5808"], ["post_number", "380-5041"], ["address", "和田村"], ["created_at", "2016-02-26 02:29:49.592620"], ["updated_at", "2016-02-26 02:29:49.592620"]]
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '15' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "15"], ["name", "中山 楓"], ["birthday", "1967-12-12"], ["phone1", "064-236-4452"], ["phone2", "0255-43-8523"], ["post_number", "370-8914"], ["address", "奏太区"], ["created_at", "2016-02-26 02:29:49.606080"], ["updated_at", "2016-02-26 02:29:49.606080"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '16' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "16"], ["name", "原 優那"], ["birthday", "1980-10-27"], ["phone1", "05-5602-8743"], ["phone2", "08-0907-0607"], ["post_number", "713-6226"], ["address", "藤本郡"], ["created_at", "2016-02-26 02:29:49.619336"], ["updated_at", "2016-02-26 02:29:49.619336"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '17' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "17"], ["name", "渡辺 悠"], ["birthday", "1972-07-05"], ["phone1", "099-491-8035"], ["phone2", "0769-25-0014"], ["post_number", "613-3851"], ["address", "大菅原村"], ["created_at", "2016-02-26 02:29:49.632760"], ["updated_at", "2016-02-26 02:29:49.632760"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '18' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "18"], ["name", "森 結菜"], ["birthday", "1982-12-23"], ["phone1", "094-108-7048"], ["phone2", "09-9852-0967"], ["post_number", "626-6751"], ["address", "南佐藤郡"], ["created_at", "2016-02-26 02:29:49.643949"], ["updated_at", "2016-02-26 02:29:49.643949"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '19' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "19"], ["name", "宮本 葵"], ["birthday", "1961-08-17"], ["phone1", "025-949-8927"], ["phone2", "086-159-5234"], ["post_number", "915-1085"], ["address", "石井町"], ["created_at", "2016-02-26 02:29:49.656652"], ["updated_at", "2016-02-26 02:29:49.656652"]]
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '20' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "20"], ["name", "原田 葵"], ["birthday", "1979-05-29"], ["phone1", "08-5196-0416"], ["phone2", "03207-8-2276"], ["post_number", "999-4868"], ["address", "小丸山町"], ["created_at", "2016-02-26 02:29:49.668506"], ["updated_at", "2016-02-26 02:29:49.668506"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '21' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "21"], ["name", "宮崎 悠真"], ["birthday", "1992-11-04"], ["phone1", "08-5075-5860"], ["phone2", "0456-55-5340"], ["post_number", "487-3954"], ["address", "福田郡"], ["created_at", "2016-02-26 02:29:49.681956"], ["updated_at", "2016-02-26 02:29:49.681956"]]
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '22' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "22"], ["name", "菊地 健"], ["birthday", "1979-03-27"], ["phone1", "082-810-9972"], ["phone2", "08600-8-8529"], ["post_number", "591-1214"], ["address", "北明日香郡"], ["created_at", "2016-02-26 02:29:49.693228"], ["updated_at", "2016-02-26 02:29:49.693228"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '23' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "23"], ["name", "菅原 陽菜"], ["birthday", "1984-08-24"], ["phone1", "0351-13-0408"], ["phone2", "055-113-3181"], ["post_number", "830-5049"], ["address", "南莉子郡"], ["created_at", "2016-02-26 02:29:49.706660"], ["updated_at", "2016-02-26 02:29:49.706660"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '24' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "24"], ["name", "中島 蓮"], ["birthday", "1982-02-13"], ["phone1", "084-499-1189"], ["phone2", "0618-36-8017"], ["post_number", "772-7996"], ["address", "北悠真郡"], ["created_at", "2016-02-26 02:29:49.719030"], ["updated_at", "2016-02-26 02:29:49.719030"]]
+  [1m[36mUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '25' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "25"], ["name", "坂本 瑛太"], ["birthday", "1978-02-27"], ["phone1", "04143-3-7218"], ["phone2", "05571-8-5059"], ["post_number", "534-8625"], ["address", "小山区"], ["created_at", "2016-02-26 02:29:49.733367"], ["updated_at", "2016-02-26 02:29:49.733367"]]
+  [1m[36mUser Exists (3.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '26' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "26"], ["name", "山下 陽"], ["birthday", "1991-08-02"], ["phone1", "0485-85-0611"], ["phone2", "03234-2-7994"], ["post_number", "989-8998"], ["address", "大翔太区"], ["created_at", "2016-02-26 02:29:49.810832"], ["updated_at", "2016-02-26 02:29:49.810832"]]
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '27' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "27"], ["name", "遠藤 愛美"], ["birthday", "1986-03-11"], ["phone1", "066-321-6553"], ["phone2", "0347-81-3860"], ["post_number", "538-4906"], ["address", "東美月市"], ["created_at", "2016-02-26 02:29:49.903299"], ["updated_at", "2016-02-26 02:29:49.903299"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '28' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "28"], ["name", "太田 優菜"], ["birthday", "1992-05-05"], ["phone1", "012-913-5190"], ["phone2", "074-055-3593"], ["post_number", "812-4335"], ["address", "南山崎村"], ["created_at", "2016-02-26 02:29:49.945770"], ["updated_at", "2016-02-26 02:29:49.945770"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '29' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "29"], ["name", "田村 結"], ["birthday", "1984-06-15"], ["phone1", "09-1269-5386"], ["phone2", "0869-01-2957"], ["post_number", "288-2203"], ["address", "陽斗村"], ["created_at", "2016-02-26 02:29:49.974740"], ["updated_at", "2016-02-26 02:29:49.974740"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '30' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "30"], ["name", "高木 響"], ["birthday", "1994-03-13"], ["phone1", "03-4712-0691"], ["phone2", "031-585-9764"], ["post_number", "915-4150"], ["address", "新吉田市"], ["created_at", "2016-02-26 02:29:49.986038"], ["updated_at", "2016-02-26 02:29:49.986038"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '31' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "31"], ["name", "千葉 健"], ["birthday", "1962-07-29"], ["phone1", "0706-66-9387"], ["phone2", "03-9599-4659"], ["post_number", "107-7173"], ["address", "西渡部村"], ["created_at", "2016-02-26 02:29:50.000815"], ["updated_at", "2016-02-26 02:29:50.000815"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '32' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "32"], ["name", "小島 優斗"], ["birthday", "1971-07-10"], ["phone1", "0962-22-3780"], ["phone2", "031-515-9181"], ["post_number", "270-9416"], ["address", "前田郡"], ["created_at", "2016-02-26 02:29:50.011225"], ["updated_at", "2016-02-26 02:29:50.011225"]]
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '33' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "33"], ["name", "山田 大翔"], ["birthday", "1968-05-03"], ["phone1", "081-806-6415"], ["phone2", "09-2127-2016"], ["post_number", "103-9556"], ["address", "山下市"], ["created_at", "2016-02-26 02:29:50.026043"], ["updated_at", "2016-02-26 02:29:50.026043"]]
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '34' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "34"], ["name", "上田 蒼"], ["birthday", "1965-06-27"], ["phone1", "02-6269-6809"], ["phone2", "01-1876-8675"], ["post_number", "290-6478"], ["address", "優衣市"], ["created_at", "2016-02-26 02:29:50.042543"], ["updated_at", "2016-02-26 02:29:50.042543"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '35' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "35"], ["name", "佐々木 優衣"], ["birthday", "1964-02-29"], ["phone1", "09-6906-1274"], ["phone2", "0734-95-1710"], ["post_number", "603-8884"], ["address", "中横山郡"], ["created_at", "2016-02-26 02:29:50.057246"], ["updated_at", "2016-02-26 02:29:50.057246"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '36' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "36"], ["name", "久保 奏太"], ["birthday", "1967-11-18"], ["phone1", "084-128-5843"], ["phone2", "034-323-9466"], ["post_number", "864-4979"], ["address", "佐藤市"], ["created_at", "2016-02-26 02:29:50.070952"], ["updated_at", "2016-02-26 02:29:50.070952"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '37' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "37"], ["name", "中川 杏"], ["birthday", "1962-10-28"], ["phone1", "09924-6-8264"], ["phone2", "0654-28-8628"], ["post_number", "843-1316"], ["address", "北後藤市"], ["created_at", "2016-02-26 02:29:50.084471"], ["updated_at", "2016-02-26 02:29:50.084471"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '38' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "38"], ["name", "工藤 彩乃"], ["birthday", "1968-03-24"], ["phone1", "0857-14-0697"], ["phone2", "0323-24-9500"], ["post_number", "778-5715"], ["address", "西瑛太区"], ["created_at", "2016-02-26 02:29:50.095441"], ["updated_at", "2016-02-26 02:29:50.095441"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '39' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "39"], ["name", "野村 明日香"], ["birthday", "1969-09-27"], ["phone1", "078-521-8003"], ["phone2", "0966-60-1964"], ["post_number", "641-8181"], ["address", "陽斗町"], ["created_at", "2016-02-26 02:29:50.128599"], ["updated_at", "2016-02-26 02:29:50.128599"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '40' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "40"], ["name", "柴田 優斗"], ["birthday", "1980-01-26"], ["phone1", "01-6678-6940"], ["phone2", "077-275-5726"], ["post_number", "277-8271"], ["address", "南明日香郡"], ["created_at", "2016-02-26 02:29:50.138530"], ["updated_at", "2016-02-26 02:29:50.138530"]]
+  [1m[36mUser Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '41' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "41"], ["name", "金子 真央"], ["birthday", "1980-01-29"], ["phone1", "02-0858-0792"], ["phone2", "095-531-3977"], ["post_number", "619-4592"], ["address", "優郡"], ["created_at", "2016-02-26 02:29:50.153359"], ["updated_at", "2016-02-26 02:29:50.153359"]]
+  [1m[36mUser Exists (9.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '42' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "42"], ["name", "山本 彩花"], ["birthday", "1987-11-21"], ["phone1", "0592-93-5933"], ["phone2", "021-139-2347"], ["post_number", "675-1572"], ["address", "翔市"], ["created_at", "2016-02-26 02:29:50.182569"], ["updated_at", "2016-02-26 02:29:50.182569"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '43' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "43"], ["name", "清水 空"], ["birthday", "1974-07-05"], ["phone1", "0908-55-0451"], ["phone2", "0850-90-6117"], ["post_number", "660-4503"], ["address", "中優那郡"], ["created_at", "2016-02-26 02:29:50.232391"], ["updated_at", "2016-02-26 02:29:50.232391"]]
+  [1m[36mUser Exists (2.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '44' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "44"], ["name", "金子 匠"], ["birthday", "1973-07-05"], ["phone1", "01970-7-9172"], ["phone2", "03-3190-3329"], ["post_number", "960-9923"], ["address", "酒井郡"], ["created_at", "2016-02-26 02:29:50.272112"], ["updated_at", "2016-02-26 02:29:50.272112"]]
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '45' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "45"], ["name", "柴田 空"], ["birthday", "1970-09-23"], ["phone1", "0880-36-7422"], ["phone2", "06856-7-9866"], ["post_number", "914-6976"], ["address", "小玲奈郡"], ["created_at", "2016-02-26 02:29:50.355158"], ["updated_at", "2016-02-26 02:29:50.355158"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '46' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "46"], ["name", "安藤 彩乃"], ["birthday", "1976-03-21"], ["phone1", "0213-85-0616"], ["phone2", "07-6183-2018"], ["post_number", "129-1793"], ["address", "新直樹区"], ["created_at", "2016-02-26 02:29:50.405209"], ["updated_at", "2016-02-26 02:29:50.405209"]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '47' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "47"], ["name", "新井 優菜"], ["birthday", "1978-11-23"], ["phone1", "01-4038-3304"], ["phone2", "08701-1-6579"], ["post_number", "488-2315"], ["address", "石川町"], ["created_at", "2016-02-26 02:29:50.419375"], ["updated_at", "2016-02-26 02:29:50.419375"]]
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '48' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "48"], ["name", "長谷川 健太"], ["birthday", "1991-12-03"], ["phone1", "03-9642-4546"], ["phone2", "0785-92-7371"], ["post_number", "970-9150"], ["address", "彩市"], ["created_at", "2016-02-26 02:29:50.433229"], ["updated_at", "2016-02-26 02:29:50.433229"]]
+  [1m[36mUser Exists (2.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '49' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "49"], ["name", "吉田 美咲"], ["birthday", "1981-05-19"], ["phone1", "0735-05-6221"], ["phone2", "02-4547-4014"], ["post_number", "298-6615"], ["address", "遥町"], ["created_at", "2016-02-26 02:29:50.446474"], ["updated_at", "2016-02-26 02:29:50.446474"]]
+  [1m[36m (24.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 11:34:39 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (13.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (143.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (824.6ms)
+Completed 200 OK in 12411ms (Views: 11461.3ms | ActiveRecord: 277.3ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 11:36:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (15.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (455.2ms)
+Completed 200 OK in 3189ms (Views: 3167.3ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 11:36:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 11:36:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 11:36:12 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 11:36:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 11:36:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-26 11:36:17 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 11:36:18 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 11:36:19 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 11:36:20 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 11:36:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 11:37:36 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 1166ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/mnt/ruby/master_table/app/views/users/index.html.erb:25: syntax error, unexpected ')', expecting keyword_end
+...me(date_format).to_i) / 10000 );@output_buffer.safe_append='...
+...                               ^):
+  app/views/users/index.html.erb:25: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (145.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.4ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (536.1ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 11:38:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 1122ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/mnt/ruby/master_table/app/views/users/index.html.erb:25: syntax error, unexpected ')', expecting keyword_end
+...ftime("%Y%m%d").to_i) / 10000 );@output_buffer.safe_append='...
+...                               ^):
+  app/views/users/index.html.erb:25: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (27.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (47.5ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (524.6ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 11:38:58 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (11.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (204.3ms)
+Completed 200 OK in 3028ms (Views: 3014.8ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 11:39:03 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 11:39:04 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 11:39:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-26 11:39:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 11:39:08 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 11:39:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 11:39:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 11:39:12 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 11:39:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 11:39:14 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 11:40:02 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (13.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (198.7ms)
+Completed 200 OK in 3035ms (Views: 3007.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 11:40:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 11:40:08 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 11:40:10 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-26 11:40:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 11:40:12 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 11:40:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 11:40:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 11:40:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 11:40:17 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 11:40:18 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/1/edit" for 10.0.80.54 at 2016-02-26 11:40:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (8.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (2107.7ms)
+  Rendered users/edit.html.erb within layouts/application (2440.0ms)
+Completed 200 OK in 5546ms (Views: 4973.5ms | ActiveRecord: 8.4ms)
+
+
+Started PATCH "/users/1" for 10.0.80.54 at 2016-02-26 11:40:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VESApy8CFP9m1pLu9GxsBWI4Khc1Sp5lkZLa15EC0hKV+h5hvEaU9g2HqyzrhhuIA77ZDcvl3WeCjT65D8xF/A==", "user"=>{"emp_id"=>"0", "name"=>"三浦 真央", "birthday(1i)"=>"1969", "birthday(2i)"=>"9", "birthday(3i)"=>"12", "phone1"=>"084-790-4895", "phone2"=>"032-223-6879", "post_number"=>"123-3005", "address"=>"東琴音郡", "other"=>"最高責任者"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[36mUser Load (36.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (24.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '0' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (131.1ms)[0m  UPDATE "users" SET "other" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["other", "最高責任者"], ["updated_at", "2016-02-26 02:40:56.038278"], ["id", 1]]
+  [1m[36m (72.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://10.0.80.200:3000/users/1
+Completed 302 Found in 1383ms (ActiveRecord: 263.7ms)
+
+
+Started GET "/users/1" for 10.0.80.54 at 2016-02-26 11:40:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (68.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 3208ms (Views: 3117.6ms | ActiveRecord: 68.1ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 11:41:03 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (10.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (411.0ms)
+Completed 200 OK in 3199ms (Views: 3185.5ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 11:43:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (87.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (348.2ms)
+Completed 200 OK in 3535ms (Views: 3428.2ms | ActiveRecord: 87.8ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 11:44:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 11:44:06 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-26 11:44:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 11:44:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 11:44:10 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 11:44:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 11:44:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 11:44:14 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 11:44:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 11:44:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 11:45:45 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (11.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (320.6ms)
+Completed 200 OK in 3275ms (Views: 3260.3ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 11:45:50 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 11:45:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 11:45:52 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 11:45:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-26 11:45:55 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 11:45:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 11:45:58 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 11:45:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 11:46:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 11:46:02 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:01:31 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (12.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2670.2ms)
+Completed 500 Internal Server Error in 3779ms (ActiveRecord: 12.4ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( user.js )` to `config/initializers/assets.rb` and restart your server):
+    43:   </tbody>
+    44: </table>
+    45: 
+    46: <%= javascript_include_tag "user" %>
+    47: <br>
+  app/views/users/index.html.erb:46:in `_app_views_users_index_html_erb___135082769__645028608'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (47.4ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (125.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (585.7ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:02:46 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (13.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (466.0ms)
+Completed 200 OK in 7276ms (Views: 7260.6ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 12:02:55 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 12:02:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 12:02:58 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 12:03:00 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 12:03:02 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-26 12:03:03 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 12:03:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 12:03:06 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/user.self-36007e146826c941d231ea8fbff0a92a13bf45014c226848253ab0936b0f67a1.js?body=1" for 10.0.80.54 at 2016-02-26 12:03:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 12:03:08 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 12:03:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:06:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (14.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (371.9ms)
+Completed 200 OK in 6332ms (Views: 6316.1ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 12:06:34 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 10.0.80.54 at 2016-02-26 12:06:36 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 12:06:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 12:06:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 12:06:40 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 12:06:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 12:06:42 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 12:06:44 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/user.self-79ac8808e7a8d596cda3833867324f890a82b464b0800fd02aeb64303f60bb4d.js?body=1" for 10.0.80.54 at 2016-02-26 12:06:45 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 12:06:47 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 12:06:48 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:07:52 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (16.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (187.5ms)
+Completed 200 OK in 9599ms (Views: 9578.6ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 12:08:03 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 12:08:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 12:08:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 12:08:08 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-135d521ea5b9c72fb1aea45c328af9ce50d48d66e2a2ec54a41521bc576a05ab.css?body=1" for 10.0.80.54 at 2016-02-26 12:08:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 12:08:10 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 12:08:12 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 12:08:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/user.self-01021f9acc5e90baba5171bc1942b2d194c6f823cd08c045fa286058b53e669b.js?body=1" for 10.0.80.54 at 2016-02-26 12:08:14 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 12:08:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 12:08:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:27:30 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (10.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (487.3ms)
+Completed 200 OK in 6222ms (Views: 6209.2ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 12:27:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 12:27:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 12:27:42 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-135d521ea5b9c72fb1aea45c328af9ce50d48d66e2a2ec54a41521bc576a05ab.css?body=1" for 10.0.80.54 at 2016-02-26 12:27:44 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 12:27:46 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 12:27:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 12:27:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 12:27:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/user.self-cf9b6295ec8d75c90ac169eeef6b69655541d1f9667d4cea4f2872c847f1015d.js?body=1" for 10.0.80.54 at 2016-02-26 12:27:55 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 12:27:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 12:27:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:29:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (16.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_form.html.erb (315.6ms)
+  Rendered users/index.html.erb within layouts/application (947.3ms)
+Completed 500 Internal Server Error in 2021ms (ActiveRecord: 16.7ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user) do |f| %>
+    2:   <% if @user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___6367844__645127738'
+  app/views/users/index.html.erb:59:in `_app_views_users_index_html_erb___135082769__640671518'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (38.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (35.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (561.2ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:42:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (15.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_form.html.erb (290.4ms)
+  Rendered users/index.html.erb within layouts/application (1087.2ms)
+Completed 500 Internal Server Error in 2348ms (ActiveRecord: 15.3ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user) do |f| %>
+    2:   <% if @user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___6367844__637464648'
+  app/views/users/index.html.erb:60:in `_app_views_users_index_html_erb___135082769__636082458'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (70.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (523.6ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:43:04 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (9.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_form.html.erb (362.0ms)
+  Rendered users/index.html.erb within layouts/application (1086.9ms)
+Completed 500 Internal Server Error in 2254ms (ActiveRecord: 9.3ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user) do |f| %>
+    2:   <% if @user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___6367844__637464648'
+  app/views/users/index.html.erb:60:in `_app_views_users_index_html_erb___135082769__636082458'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (43.8ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (496.6ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:43:10 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (55.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_form.html.erb (155.5ms)
+  Rendered users/index.html.erb within layouts/application (817.9ms)
+Completed 500 Internal Server Error in 1908ms (ActiveRecord: 55.8ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user) do |f| %>
+    2:   <% if @user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___6367844__649875158'
+  app/views/users/index.html.erb:60:in `_app_views_users_index_html_erb___135082769__648532018'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (39.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (70.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (528.2ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:43:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (26.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_form.html.erb (347.2ms)
+  Rendered users/index.html.erb within layouts/application (952.0ms)
+Completed 500 Internal Server Error in 1846ms (ActiveRecord: 26.3ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user) do |f| %>
+    2:   <% if @user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___6367844__649875158'
+  app/views/users/index.html.erb:60:in `_app_views_users_index_html_erb___135082769__648532018'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.8ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.8ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (479.9ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:43:30 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (9.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (385.9ms)
+Completed 200 OK in 3142ms (Views: 3112.4ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 12:43:34 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 12:43:35 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 12:43:36 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 12:43:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-135d521ea5b9c72fb1aea45c328af9ce50d48d66e2a2ec54a41521bc576a05ab.css?body=1" for 10.0.80.54 at 2016-02-26 12:43:39 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 12:43:40 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 12:43:42 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 12:43:43 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/user.self-cf9b6295ec8d75c90ac169eeef6b69655541d1f9667d4cea4f2872c847f1015d.js?body=1" for 10.0.80.54 at 2016-02-26 12:43:44 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 12:43:46 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 12:43:47 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 12:43:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (9.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (155.5ms)
+Completed 200 OK in 3017ms (Views: 3006.3ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/rails/info" for 10.0.80.54 at 2016-02-26 12:43:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#index as HTML
+Redirected to http://10.0.80.200:3000/rails/info/routes
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 10.0.80.54 at 2016-02-26 12:44:00 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (324.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/railties-4.2.5.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (470.4ms)
+Completed 200 OK in 566ms (Views: 564.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 12:44:03 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (16.2ms)
+  Rendered users/new.html.erb within layouts/application (450.5ms)
+Completed 200 OK in 3194ms (Views: 3190.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 13:54:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (38.1ms)
+  Rendered users/new.html.erb within layouts/application (1030.3ms)
+Completed 200 OK in 6615ms (Views: 6572.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 13:56:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (40.8ms)
+  Rendered users/new.html.erb within layouts/application (724.2ms)
+Completed 200 OK in 6530ms (Views: 6528.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 13:56:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 13:56:18 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 13:56:21 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-135d521ea5b9c72fb1aea45c328af9ce50d48d66e2a2ec54a41521bc576a05ab.css?body=1" for 10.0.80.54 at 2016-02-26 13:56:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 13:56:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 13:56:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 13:56:31 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 13:56:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/user.self-cf9b6295ec8d75c90ac169eeef6b69655541d1f9667d4cea4f2872c847f1015d.js?body=1" for 10.0.80.54 at 2016-02-26 13:56:36 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 13:56:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 13:56:40 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 14:11:06 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (186.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (1165.3ms)
+  Rendered users/index.html.erb within layouts/application (2029.6ms)
+Completed 200 OK in 14850ms (Views: 13780.1ms | ActiveRecord: 309.3ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 14:11:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (67.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (882.3ms)
+  Rendered users/index.html.erb within layouts/application (1835.4ms)
+Completed 200 OK in 9174ms (Views: 9074.2ms | ActiveRecord: 67.8ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-02-26 14:11:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (83.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (708.5ms)
+  Rendered users/index.html.erb within layouts/application (1204.4ms)
+Completed 200 OK in 6768ms (Views: 6633.8ms | ActiveRecord: 83.9ms)
+
+
+Started GET "/users/1/edit" for 10.0.80.54 at 2016-02-26 14:12:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (36.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.erb (157.6ms)
+  Rendered users/edit.html.erb within layouts/application (953.3ms)
+Completed 200 OK in 6355ms (Views: 6280.6ms | ActiveRecord: 36.5ms)
+
+
+Started GET "/users/1" for 10.0.80.54 at 2016-02-26 14:13:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (74.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 5608ms (Views: 5496.6ms | ActiveRecord: 74.6ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 14:13:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (51.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (535.6ms)
+  Rendered users/index.html.erb within layouts/application (1369.7ms)
+Completed 200 OK in 6990ms (Views: 6918.8ms | ActiveRecord: 51.6ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 14:13:50 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (204.1ms)
+  Rendered users/new.html.erb within layouts/application (10325.3ms)
+Completed 200 OK in 23055ms (Views: 23016.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 10.0.80.54 at 2016-02-26 14:14:40 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (60.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (113.9ms)
+  Rendered users/edit.html.erb within layouts/application (932.5ms)
+Completed 200 OK in 6828ms (Views: 6717.9ms | ActiveRecord: 60.1ms)
+
+
+Started PATCH "/users/1" for 10.0.80.54 at 2016-02-26 14:15:27 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 真央", "birthday(1i)"=>"1969", "birthday(2i)"=>"9", "birthday(3i)"=>"12", "phone1"=>"084-790-4895", "phone2"=>"032-223-6879", "post_number"=>"123-3005", "address"=>"東琴音郡", "other"=>"最高責任者"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[36mUser Load (42.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 11848ms (ActiveRecord: 42.9ms)
+
+ActionView::MissingTemplate (Missing template users/update, application/update with {:locale=>[:ja], :formats=>[:js, "application/ecmascript", "application/x-ecmascript", :html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/ruby/master_table/app/views"
+):
+  actionview (4.2.5.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.5.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:815:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (1.0ms)
+
+
+Started PATCH "/users/1" for 10.0.80.54 at 2016-02-26 14:17:18 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 真央", "birthday(1i)"=>"1969", "birthday(2i)"=>"9", "birthday(3i)"=>"12", "phone1"=>"084-790-4895", "phone2"=>"032-223-6879", "post_number"=>"123-3005", "address"=>"東琴音郡", "other"=>"最高責任者"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[35mUser Load (33.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 13406ms (ActiveRecord: 33.0ms)
+
+ActionView::MissingTemplate (Missing template users/update, application/update with {:locale=>[:ja], :formats=>[:js, "application/ecmascript", "application/x-ecmascript", :html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/ruby/master_table/app/views"
+):
+  actionview (4.2.5.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.5.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:815:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.9ms)
+
+
+Started GET "/users/1/edit" for 10.0.80.54 at 2016-02-26 14:17:39 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (57.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.erb (55.0ms)
+  Rendered users/edit.html.erb within layouts/application (692.4ms)
+Completed 200 OK in 5914ms (Views: 5778.1ms | ActiveRecord: 57.3ms)
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 14:17:47 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 14:17:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 14:17:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-135d521ea5b9c72fb1aea45c328af9ce50d48d66e2a2ec54a41521bc576a05ab.css?body=1" for 10.0.80.54 at 2016-02-26 14:17:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 14:17:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 14:17:58 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 14:18:00 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 14:18:02 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 14:18:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 14:18:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started PATCH "/users/1" for 10.0.80.54 at 2016-02-26 14:18:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XdIiL7sjZ/7KmUEShD3egj/PR5JnegHCn8pxICE+57+cbLzpKGfn96HIeNCb16kPXkm0iJnVQsCM1ZVOv/BwUQ==", "user"=>{"emp_id"=>"1", "name"=>"", "birthday(1i)"=>"1969", "birthday(2i)"=>"9", "birthday(3i)"=>"12", "phone1"=>"084-790-4895", "phone2"=>"032-223-6879", "post_number"=>"123-3005", "address"=>"東琴音郡", "other"=>"最高責任者"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[35mUser Load (37.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 1342ms (ActiveRecord: 37.5ms)
+
+ActionView::MissingTemplate (Missing template users/update, application/update with {:locale=>[:ja], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/ruby/master_table/app/views"
+):
+  actionview (4.2.5.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.5.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:815:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (176.4ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (45.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (29.2ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (1087.5ms)
+
+
+Started GET "/users/1/edit" for 10.0.80.54 at 2016-02-26 14:35:18 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (91.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (56.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (8257.3ms)
+  Rendered users/edit.html.erb within layouts/application (9234.4ms)
+Completed 200 OK in 34065ms (Views: 31497.9ms | ActiveRecord: 308.6ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-02-26 14:36:14 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (52.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (639.5ms)
+  Rendered users/index.html.erb within layouts/application (1252.3ms)
+Completed 200 OK in 6710ms (Views: 6583.6ms | ActiveRecord: 52.4ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-02-26 14:36:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (51.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (659.8ms)
+  Rendered users/index.html.erb within layouts/application (1329.8ms)
+Completed 200 OK in 6668ms (Views: 6584.8ms | ActiveRecord: 51.3ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-26 14:36:32 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (89.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (855.5ms)
+  Rendered users/index.html.erb within layouts/application (1406.6ms)
+Completed 200 OK in 6937ms (Views: 6828.7ms | ActiveRecord: 89.9ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-02-26 14:36:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (41.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (815.4ms)
+  Rendered users/index.html.erb within layouts/application (1425.8ms)
+Completed 200 OK in 6771ms (Views: 6677.0ms | ActiveRecord: 41.0ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 14:36:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (145.7ms)
+  Rendered users/_new.html.erb (6772.4ms)
+  Rendered users/new.js.erb (14407.6ms)
+Completed 200 OK in 22936ms (Views: 22920.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 14:37:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (45.0ms)
+  Rendered users/_new.html.erb (6220.1ms)
+  Rendered users/new.js.erb (13049.5ms)
+Completed 200 OK in 21466ms (Views: 21462.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 10.0.80.54 at 2016-02-26 14:37:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (47.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.erb (50.8ms)
+  Rendered users/edit.html.erb within layouts/application (822.6ms)
+Completed 200 OK in 5990ms (Views: 5920.8ms | ActiveRecord: 47.5ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 14:38:17 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (108.3ms)
+  Rendered users/_new.html.erb (6013.0ms)
+  Rendered users/new.js.erb (12155.6ms)
+Completed 200 OK in 19481ms (Views: 19479.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 14:40:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (49.2ms)
+  Rendered users/_new.html.erb (6051.9ms)
+  Rendered users/new.js.erb (12004.9ms)
+Completed 200 OK in 19541ms (Views: 19539.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.80.54 at 2016-02-26 14:41:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"51", "name"=>"", "birthday(1i)"=>"2016", "birthday(2i)"=>"2", "birthday(3i)"=>"26", "phone1"=>"", "phone2"=>"", "post_number"=>"", "address"=>"", "other"=>""}, "commit"=>"Save"}
+  [1m[35mUser Load (25.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (583.2ms)
+  Rendered users/_save.js.erb (9400.1ms)
+  Rendered users/create.js.erb (15985.6ms)
+Completed 200 OK in 23486ms (Views: 23395.3ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-02-26 14:41:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (24.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (616.8ms)
+  Rendered users/index.html.erb within layouts/application (1184.6ms)
+Completed 200 OK in 6332ms (Views: 6304.6ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 14:41:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 14:41:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 14:41:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-135d521ea5b9c72fb1aea45c328af9ce50d48d66e2a2ec54a41521bc576a05ab.css?body=1" for 10.0.80.54 at 2016-02-26 14:41:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 14:41:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 14:42:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 14:42:03 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 14:42:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 14:42:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 14:42:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 14:42:18 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (131.4ms)
+  Rendered users/_new.html.erb (6057.5ms)
+  Rendered users/new.js.erb (12311.2ms)
+Completed 200 OK in 20158ms (Views: 20156.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.80.54 at 2016-02-26 14:43:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"51", "name"=>"高田さん", "birthday(1i)"=>"2016", "birthday(2i)"=>"2", "birthday(3i)"=>"26", "phone1"=>"08066667777", "phone2"=>"", "post_number"=>"111-1111", "address"=>"福岡県", "other"=>""}, "commit"=>"Save"}
+  [1m[35mUser Load (51.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (653.7ms)
+  Rendered users/_save.js.erb (8385.7ms)
+  Rendered users/create.js.erb (14382.3ms)
+Completed 200 OK in 21902ms (Views: 21829.4ms | ActiveRecord: 51.6ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-02-26 14:43:36 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (81.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (444.7ms)
+  Rendered users/index.html.erb within layouts/application (1104.6ms)
+Completed 200 OK in 6700ms (Views: 6586.0ms | ActiveRecord: 81.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 14:43:45 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-135d521ea5b9c72fb1aea45c328af9ce50d48d66e2a2ec54a41521bc576a05ab.css?body=1" for 10.0.80.54 at 2016-02-26 14:43:47 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 14:43:50 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 14:43:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 14:43:55 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 14:43:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 14:43:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 14:44:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 14:44:04 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 14:44:06 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 14:44:27 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (72.3ms)
+  Rendered users/_new.html.erb (6043.8ms)
+  Rendered users/new.js.erb (12018.9ms)
+Completed 200 OK in 19679ms (Views: 19651.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.80.54 at 2016-02-26 14:45:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"111", "name"=>"高田 多々他", "birthday(1i)"=>"2016", "birthday(2i)"=>"2", "birthday(3i)"=>"26", "phone1"=>"08052111111", "phone2"=>"1111111111", "post_number"=>"1111111111", "address"=>"福岡県福岡市", "other"=>""}, "commit"=>"Save"}
+  [1m[35mUser Load (75.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (557.1ms)
+  Rendered users/_save.js.erb (6486.1ms)
+  Rendered users/create.js.erb (12806.7ms)
+Completed 200 OK in 20715ms (Views: 20597.2ms | ActiveRecord: 75.4ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-02-26 14:48:21 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (185.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (1002.3ms)
+  Rendered users/index.html.erb within layouts/application (1598.3ms)
+Completed 200 OK in 7760ms (Views: 6652.8ms | ActiveRecord: 429.0ms)
+
+
+Started GET "/assets/application.self-135d521ea5b9c72fb1aea45c328af9ce50d48d66e2a2ec54a41521bc576a05ab.css?body=1" for 10.0.80.54 at 2016-02-26 14:48:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 14:48:35 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 14:48:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 14:48:40 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 14:48:42 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 14:48:44 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 14:48:46 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 14:48:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 14:48:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 14:48:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 14:49:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (231.4ms)
+  Rendered users/_new.html.erb (5993.8ms)
+  Rendered users/new.js.erb (12023.9ms)
+Completed 200 OK in 19370ms (Views: 19336.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.80.54 at 2016-02-26 14:50:40 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"50", "name"=>"高田多々他", "birthday(1i)"=>"2011", "birthday(2i)"=>"2", "birthday(3i)"=>"26", "phone1"=>"111-1111-111", "phone2"=>"222-2222-2222", "post_number"=>"333-3333", "address"=>"福岡県福岡市東区和白東5-15-30", "other"=>"controlle new"}, "commit"=>"Save"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mUser Exists (58.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '50' LIMIT 1[0m
+  [1m[35mSQL (75.4ms)[0m  INSERT INTO "users" ("emp_id", "name", "phone1", "phone2", "post_number", "address", "other", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["emp_id", "50"], ["name", "高田多々他"], ["phone1", "111-1111-111"], ["phone2", "222-2222-2222"], ["post_number", "333-3333"], ["address", "福岡県福岡市東区和白東5-15-30"], ["other", "controlle new"], ["birthday", "2011-02-26"], ["created_at", "2016-02-26 05:50:43.192133"], ["updated_at", "2016-02-26 05:50:43.192133"]]
+  [1m[36m (59.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (35.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (643.1ms)
+  Rendered users/_save.js.erb (7497.6ms)
+  Rendered users/create.js.erb (13496.0ms)
+Completed 200 OK in 22666ms (Views: 21095.2ms | ActiveRecord: 229.4ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 15:00:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (94.6ms)
+  Rendered users/_new.html.erb (5965.2ms)
+  Rendered users/new.js.erb (11800.4ms)
+Completed 200 OK in 19309ms (Views: 19305.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 15:01:32 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (174.4ms)
+  Rendered users/_new.html.erb (5808.8ms)
+  Rendered users/new.js.erb (11456.7ms)
+Completed 200 OK in 21836ms (Views: 21815.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-02-26 15:03:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (25.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (624.5ms)
+  Rendered users/index.html.erb within layouts/application (1264.4ms)
+Completed 200 OK in 6770ms (Views: 6710.1ms | ActiveRecord: 25.1ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 15:06:18 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (70.8ms)
+  Rendered users/_new.html.erb (5568.6ms)
+  Rendered users/new.js.erb (11401.6ms)
+Completed 200 OK in 18884ms (Views: 18868.7ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (19.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (312.9ms)[0m  DELETE FROM "users"
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '0' LIMIT 1
+  [1m[36mSQL (33.2ms)[0m  [1mINSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["emp_id", "0"], ["name", "吉田 結菜"], ["birthday", "1978-09-22"], ["phone1", "08304-2-2042"], ["phone2", "0847-14-6732"], ["post_number", "401-3706"], ["address", "大翔郡"], ["created_at", "2016-02-26 06:15:42.200881"], ["updated_at", "2016-02-26 06:15:42.200881"]]
+  [1m[35mUser Exists (4.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["emp_id", "1"], ["name", "平野 亮"], ["birthday", "1985-09-15"], ["phone1", "023-577-1819"], ["phone2", "074-976-2221"], ["post_number", "395-5836"], ["address", "新松田町"], ["created_at", "2016-02-26 06:15:42.271125"], ["updated_at", "2016-02-26 06:15:42.271125"]]
+  [1m[35mUser Exists (5.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("emp_id", "name", "birthday", "phone1", "phone2", "post_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["emp_id", "2"], ["name", "今井 大地"], ["birthday", "1966-05-03"], ["phone1", "0623-08-7438"], ["phone2", "022-178-1959"], ["post_number", "680-7137"], ["address", "東瑛太町"], ["created_at", "2016-02-26 06:15:42.306637"], ["updated_at", "2016-02-26 06:15:42.306637"]]
+  [1m[35m (99.8ms)[0m  commit transaction
+
+
+Started GET "/" for 10.0.80.54 at 2016-02-26 15:18:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (104.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (27.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (545.6ms)
+  Rendered users/index.html.erb within layouts/application (1547.3ms)
+Completed 200 OK in 24133ms (Views: 22786.6ms | ActiveRecord: 129.3ms)
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-02-26 15:19:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-02-26 15:19:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-02-26 15:19:43 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-135d521ea5b9c72fb1aea45c328af9ce50d48d66e2a2ec54a41521bc576a05ab.css?body=1" for 10.0.80.54 at 2016-02-26 15:19:46 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-02-26 15:19:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-02-26 15:19:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-02-26 15:19:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-02-26 15:19:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-02-26 15:19:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 15:20:02 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.0.80.54 at 2016-02-26 15:20:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (40.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (130.6ms)
+  Rendered users/index.html.erb within layouts/application (770.7ms)
+Completed 200 OK in 6025ms (Views: 5972.5ms | ActiveRecord: 40.5ms)
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.80.54 at 2016-02-26 15:20:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-26 15:20:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (6872.3ms)
+  Rendered users/_new.html.erb (12678.0ms)
+  Rendered users/new.js.erb (20097.0ms)
+Completed 200 OK in 31234ms (Views: 31190.6ms | ActiveRecord: 0.0ms)

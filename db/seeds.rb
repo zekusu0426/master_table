@@ -6,11 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.delete_all
+
 User.transaction do |u|
-  50.times do |i|
+  3.times do |i|
     User.create(emp_id: i,
                 name: Faker::Name.name,
-                birthday: Faker::Date.between(2.days.ago, Date.today),
+                birthday: Faker::Date.between(20000.days.ago, 7500.days.ago),
                 phone1: Faker::PhoneNumber.phone_number.gsub(".","/"),
                 phone2: Faker::PhoneNumber.phone_number.gsub(".","/"),
                 post_number: rand(100..999).to_s + "-" + rand(1000..9999).to_s,

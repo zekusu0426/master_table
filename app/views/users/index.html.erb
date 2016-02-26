@@ -1,13 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Employees Master Table</h1>
+<div class="row">
+  <div class="col-md-10">
+    <h1>Employees Master Table</h1>
+  </div>
+  <div class="col-md-2">
+    <%= link_to '社員データ新規作成', new_user_path, remote: true %>
+  </div>
+</div>
 
 <table class="table table-bordered">
   <thead>
     <tr>
       <th>社員CD</th>
       <th>社員名称</th>
-      <th>生年月日</th>
+      <th>年齢</th>
       <th>電話番号1</th>
       <th>電話番号2</th>
       <th>郵便番号</th>
@@ -17,25 +24,26 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.emp_id %></td>
-        <td><%= user.name %></td>
-        <td><%= user.birthday %></td>
-        <td><%= user.phone1 %></td>
-        <td><%= user.phone2 %></td>
-        <td><%= user.post_number %></td>
-        <td><%= user.address %></td>
-        <td><%= user.other %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <tbody class="user-index">
+    <%= render "index" %>
   </tbody>
 </table>
-
 <br>
 
-<%= link_to 'New User', new_user_path %>
+
+<div id="user-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+<!-- 新規作成ダイアログ -->
+<!-- <div id="modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">社員データ</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-body"></div>
+            </div>
+        </div>
+    </div>
+</div> -->
