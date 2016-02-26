@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Master Table</h1>
+<h1>Employees Master Table</h1>
 
 <table class="table table-bordered">
   <thead>
@@ -20,7 +20,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.id %></td>
+        <td><%= user.emp_id %></td>
         <td><%= user.name %></td>
         <td><%= user.birthday %></td>
         <td><%= user.phone1 %></td>

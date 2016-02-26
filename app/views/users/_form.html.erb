@@ -12,31 +12,35 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "社員番号" %><br>
+    <%= f.text_field :emp_id %>
+  </div>
+  <div class="field">
+    <%= f.label "社員名称" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :birthday %><br>
-    <%= f.text_field :birthday %>
+    <%= f.label "生年月日" %><br>
+    <%= f.date_select :birthday %>
   </div>
   <div class="field">
-    <%= f.label :phone1 %><br>
+    <%= f.label "電話番号1" %><br>
     <%= f.text_field :phone1 %>
   </div>
   <div class="field">
-    <%= f.label :phone2 %><br>
+    <%= f.label "電話番号2" %><br>
     <%= f.text_field :phone2 %>
   </div>
   <div class="field">
-    <%= f.label :post_number %><br>
+    <%= f.label "郵便番号" %><br>
     <%= f.text_field :post_number %>
   </div>
   <div class="field">
-    <%= f.label :address %><br>
+    <%= f.label "住所" %><br>
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :other %><br>
+    <%= f.label "備考欄" %><br>
     <%= f.text_area :other %>
   </div>
   <div class="actions">
