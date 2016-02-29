@@ -7,6 +7,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <h4 class="modal-title">社員データ登録</h4>
+          <!-- エラーログを表示する。 -->
+          <div class="error-notice"></div>
       </div>
       <div class="modal-body">
 
@@ -14,30 +16,43 @@
         <%= f.label "社員番号" %><br>
         <%= f.text_field :emp_id %>
       </div>
+
       <div class="field">
         <%= f.label "社員名称" %><br>
         <%= f.text_field :name %>
       </div>
+
       <div class="field">
         <%= f.label "生年月日" %><br>
-        <%= f.date_select :birthday %>
+        <%= f.date_select(:birthday,
+          user_mouth_numbers: true,
+          start_year: 1950,
+          end_year: (Time.now.year - 18),
+          date_separator: '/',
+          default: Date.new(1989, 1, 1)
+          ) %>
       </div>
+
       <div class="field">
         <%= f.label "電話番号1" %><br>
         <%= f.text_field :phone1 %>
       </div>
+
       <div class="field">
         <%= f.label "電話番号2" %><br>
         <%= f.text_field :phone2 %>
       </div>
+
       <div class="field">
         <%= f.label "郵便番号" %><br>
         <%= f.text_field :post_number %>
       </div>
+
       <div class="field">
         <%= f.label "住所" %><br>
         <%= f.text_field :address %>
       </div>
+
       <div class="field">
         <%= f.label "備考欄" %><br>
         <%= f.text_area :other %>

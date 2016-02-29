@@ -7,9 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.delete_all
-
 User.transaction do |u|
-  3.times do |i|
+  10.times do |i|
     User.create(emp_id: i,
                 name: Faker::Name.name,
                 birthday: Faker::Date.between(20000.days.ago, 7500.days.ago),

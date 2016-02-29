@@ -40,8 +40,13 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    @user = User.update(user_params)
-    @users = User.all
+
+    if @user.update(user_params)
+      @users = User.all
+    else
+      render 'error_notice'
+    end
+
     # respond_to do |format|
     #   if @user.update(user_params)
     #     format.html { redirect_to @user, notice: '社員データの更新を行いました。' }

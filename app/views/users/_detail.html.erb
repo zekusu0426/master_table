@@ -1,0 +1,63 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+
+      <!-- ウィンドウヘッダ -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">社員データ登録</h4>
+      </div>
+
+      <!-- ウィンドウボディ -->
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>社員CD</th>
+            <td><%= @user.emp_id %></td>
+          </tr>
+
+          <tr>
+            <th>社員名称</th>
+            <td><%= @user.name %></td>
+          </tr>
+
+          <tr>
+            <th>生年月日</th>
+            <td><%= @user.birthday %></td>
+          </tr>
+
+          <tr>
+            <th>電話番号1</th>
+            <td><%= @user.phone1 %></td>
+          </tr>
+          
+          <tr>
+            <th>電話番号2</th>
+            <td><%= @user.phone2 %></td>
+          </tr>
+          
+          <tr>
+            <th>郵便番号</th>
+            <td><%= @user.post_number %></td>
+          </tr>
+
+          <tr>
+            <th>住所</th>
+            <td><%= @user.address %></td>
+          </tr>
+
+          <tr>
+            <th>備考欄</th>
+            <td><%= @user.other %></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- ウィンドウフッター -->
+      <div class="modal-footer">
+        <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary", remote: true %>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+  </div>
+</div>

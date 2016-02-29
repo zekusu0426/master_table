@@ -18,3 +18,12 @@
 table.table tr.hv td {
   background-color: #fff4f8;
 }
+
+.error-notice {
+  background-color: #FFF;
+}
+
+.error-notice p {
+  color: red;
+  font-weight: 800;
+}

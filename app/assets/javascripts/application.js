@@ -15,3 +15,22 @@
 //= require bootstrap.min
 //= require turbolinks
 //= require_tree .
+
+<script type="text/javascript">
+<!--
+$(function(){
+  //テーブル要素のtr要素をマウスオーバーしたら
+  $('.hoge tr').hover(
+    function(){
+      //hoverクラス「hv」を追加する
+      $(this).addClass('hv');
+    },
+    //マウスアウトしたら
+    function(){
+      //hoverクラス「hv」を削除する
+      $(this).removeClass('hv');
+    }
+  );
+});
+-->
+</script>
