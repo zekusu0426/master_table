@@ -24,13 +24,9 @@
 
       <div class="field">
         <%= f.label "生年月日" %><br>
-        <%= f.date_select(:birthday,
-          user_mouth_numbers: true,
-          start_year: 1950,
-          end_year: (Time.now.year - 18),
-          date_separator: '/',
-          default: Date.new(1989, 1, 1)
-          ) %>
+        <%= f.select :year, ((Time.now.year - 20)..Time.now.year).to_a, selected: @user.birthday.year %>
+        <%= f.select :month, (1..12).to_a, selected: @user.birthday.month %>
+        <%= f.select :day, (1..31).to_a, selected: @user.birthday.day %>
       </div>
 
       <div class="field">

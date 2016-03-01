@@ -7630,3 +7630,2211 @@ Processing by UsersController#new as JS
   Rendered users/_new.html.erb (4800.3ms)
   Rendered users/new.js.erb (7892.8ms)
 Completed 200 OK in 10351ms (Views: 10347.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/56" for 10.0.80.54 at 2016-02-29 15:38:50 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (58.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as JS
+  Parameters: {"id"=>"56"}
+  [1m[35mUser Load (11.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 56]]
+  Rendered users/_detail.html.erb (3.6ms)
+  Rendered users/show.js.erb (1937.2ms)
+Completed 200 OK in 5959ms (Views: 4872.6ms | ActiveRecord: 52.1ms)
+
+
+Started GET "/users/56/edit" for 10.0.80.54 at 2016-02-29 15:39:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (36.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 56]]
+  Rendered users/_modal.html.erb (2542.2ms)
+  Rendered users/_edit.html.erb (4248.2ms)
+  Rendered users/edit.js.erb (7733.5ms)
+Completed 200 OK in 11196ms (Views: 11150.5ms | ActiveRecord: 36.2ms)
+
+
+Started PATCH "/users/56" for 10.0.80.54 at 2016-02-29 15:40:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"工藤 彩乃abc", "birthday(1i)"=>"1964", "birthday(2i)"=>"6", "birthday(3i)"=>"29", "phone1"=>"01-0926-3185", "phone2"=>"079-815-2180", "post_number"=>"757-1811", "address"=>"新亮太市", "other"=>""}, "commit"=>"Save", "id"=>"56"}
+  [1m[35mUser Load (27.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 56]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (10.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 56) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  Rendered users/error_notice.js.erb (1.0ms)
+Completed 200 OK in 3186ms (Views: 2577.5ms | ActiveRecord: 38.6ms)
+
+
+Started PATCH "/users/56" for 10.0.80.54 at 2016-02-29 15:40:32 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"0", "name"=>"工藤 彩乃", "birthday(1i)"=>"1964", "birthday(2i)"=>"6", "birthday(3i)"=>"29", "phone1"=>"01-0926-3185", "phone2"=>"079-815-2180", "post_number"=>"757-1811", "address"=>"新亮太市", "other"=>""}, "commit"=>"Save", "id"=>"56"}
+  [1m[35mUser Load (57.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 56]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (49.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '0' AND "users"."id" != 56) LIMIT 1
+  [1m[36mSQL (83.9ms)[0m  [1mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "工藤 彩乃"], ["updated_at", "2016-02-29 06:40:33.357529"], ["id", 56]]
+  [1m[35m (104.6ms)[0m  commit transaction
+  [1m[36mUser Load (18.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (78.3ms)
+  Rendered users/_save.js.erb (2029.7ms)
+  Rendered users/update.js.erb (3902.7ms)
+Completed 200 OK in 7435ms (Views: 6989.3ms | ActiveRecord: 314.0ms)
+
+
+Started DELETE "/users/56" for 10.0.80.54 at 2016-02-29 15:40:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3ADEaqsS8AfDqenirTKvrwyNtOLTfwhY8D5zg8zhGFbYpw1ueVW8/860p6MKsyPzyevP6KJdxCHEIHlZ9m1T2w==", "id"=>"56"}
+  [1m[35mUser Load (36.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 56]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (95.8ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 56]]
+  [1m[36m (109.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://10.0.80.200:3000/users
+Completed 302 Found in 310ms (ActiveRecord: 242.3ms)
+
+
+Started GET "/users" for 10.0.80.54 at 2016-02-29 15:40:52 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (19.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (63.1ms)
+  Rendered users/index.html.erb within layouts/application (224.9ms)
+Completed 200 OK in 8615ms (Views: 8593.7ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-29 15:41:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (35.0ms)
+  Rendered users/_new.html.erb (1726.0ms)
+  Rendered users/new.js.erb (3763.2ms)
+Completed 200 OK in 6041ms (Views: 6039.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.80.54 at 2016-02-29 15:41:43 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"", "name"=>"", "birthday(1i)"=>"1989", "birthday(2i)"=>"1", "birthday(3i)"=>"1", "phone1"=>"", "phone2"=>"", "post_number"=>"", "address"=>"", "other"=>""}, "commit"=>"Save"}
+  [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (35.8ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35mUser Load (9.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (56.6ms)
+  Rendered users/_save.js.erb (1682.3ms)
+  Rendered users/create.js.erb (3511.0ms)
+Completed 200 OK in 6145ms (Views: 6008.5ms | ActiveRecord: 46.6ms)
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-02-29 15:42:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (23.2ms)
+  Rendered users/_new.html.erb (1580.2ms)
+  Rendered users/new.js.erb (4522.1ms)
+Completed 200 OK in 8008ms (Views: 8004.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.80.54 at 2016-02-29 15:43:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"", "name"=>"", "birthday(1i)"=>"1989", "birthday(2i)"=>"1", "birthday(3i)"=>"1", "phone1"=>"", "phone2"=>"", "post_number"=>"", "address"=>"", "other"=>""}, "commit"=>"Save"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (26.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."emp_id" = '' LIMIT 1
+  [1m[36m (11.9ms)[0m  [1mrollback transaction[0m
+  [1m[35mUser Load (12.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (67.9ms)
+  Rendered users/_save.js.erb (3461.4ms)
+  Rendered users/create.js.erb (5572.9ms)
+Completed 200 OK in 8178ms (Views: 8001.9ms | ActiveRecord: 51.0ms)
+
+
+Started GET "/users/57" for 10.0.80.54 at 2016-02-29 15:48:28 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (45.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_detail.html.erb (1.3ms)
+  Rendered users/show.js.erb (1704.4ms)
+Completed 200 OK in 4285ms (Views: 4217.7ms | ActiveRecord: 45.8ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-02-29 15:50:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (42.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (41.6ms)
+  Rendered users/_edit.html.erb (1840.3ms)
+  Rendered users/edit.js.erb (3670.1ms)
+Completed 200 OK in 6261ms (Views: 6177.7ms | ActiveRecord: 42.3ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-02-29 15:54:36 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1997", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (38.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mUser Exists (26.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mSQL (36.2ms)[0m  UPDATE "users" SET "name" = ?, "birthday" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", "三浦 奈々"], ["birthday", "1997-03-03"], ["updated_at", "2016-02-29 06:54:37.258107"], ["id", 57]]
+  [1m[36m (71.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (17.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (86.1ms)
+  Rendered users/_save.js.erb (1838.7ms)
+  Rendered users/update.js.erb (3402.1ms)
+Completed 200 OK in 7154ms (Views: 6840.4ms | ActiveRecord: 191.0ms)
+
+
+Started GET "/users/57" for 10.0.80.54 at 2016-02-29 15:54:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (38.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_detail.html.erb (5.0ms)
+  Rendered users/show.js.erb (1824.4ms)
+Completed 200 OK in 4251ms (Views: 4205.3ms | ActiveRecord: 38.8ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-02-29 15:58:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (51.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (28.6ms)
+  Rendered users/_edit.html.erb (1962.5ms)
+  Rendered users/edit.js.erb (3727.7ms)
+Completed 200 OK in 6438ms (Views: 6376.3ms | ActiveRecord: 51.3ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 09:11:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (12.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (11.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (202.6ms)
+  Rendered users/index.html.erb within layouts/application (463.0ms)
+Completed 200 OK in 7328ms (Views: 6790.2ms | ActiveRecord: 114.6ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 09:31:19 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (24.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (85.9ms)
+  Rendered users/index.html.erb within layouts/application (333.1ms)
+Completed 200 OK in 1949ms (Views: 1912.5ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-03-01 09:31:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-03-01 09:31:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-03-01 09:31:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-03-01 09:31:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-269e34da52be310428d0aa7602164202dc6748cddd9cac37793ade4537c476f5.css?body=1" for 10.0.80.54 at 2016-03-01 09:31:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-03-01 09:31:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-03-01 09:31:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-03-01 09:31:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-03-01 09:31:27 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-fc967d5b89277d8bfd54a6e33c0d2167b0dd0df9e9ad840dabf5d82ef9f3a0e4.js?body=1" for 10.0.80.54 at 2016-03-01 09:31:27 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 10.0.80.54 at 2016-03-01 09:31:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as JS
+  Rendered users/_modal.html.erb (1885.8ms)
+  Rendered users/_new.html.erb (3687.3ms)
+  Rendered users/new.js.erb (5272.7ms)
+Completed 200 OK in 7329ms (Views: 7325.6ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (13.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (97.9ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (33.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (46.8ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (44.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36mUser Exists (11.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mSQL (32.3ms)[0m  UPDATE "users" SET "birthday" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["birthday", "2014-01-01"], ["updated_at", "2016-03-01 01:13:11.458644"], ["id", 57]]
+  [1m[36m (69.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (80.7ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (26.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (163.0ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 10:16:03 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (71.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (16.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (487.8ms)
+  Rendered users/index.html.erb within layouts/application (1072.9ms)
+Completed 200 OK in 15000ms (Views: 14216.1ms | ActiveRecord: 118.6ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-03-01 10:16:32 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-03-01 10:16:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-03-01 10:16:35 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-269e34da52be310428d0aa7602164202dc6748cddd9cac37793ade4537c476f5.css?body=1" for 10.0.80.54 at 2016-03-01 10:16:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-03-01 10:16:39 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-03-01 10:16:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-03-01 10:16:42 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-03-01 10:16:43 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-03-01 10:16:44 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-fc967d5b89277d8bfd54a6e33c0d2167b0dd0df9e9ad840dabf5d82ef9f3a0e4.js?body=1" for 10.0.80.54 at 2016-03-01 10:16:45 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/57" for 10.0.80.54 at 2016-03-01 10:16:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (21.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_detail.html.erb (5.6ms)
+  Rendered users/show.js.erb (4483.7ms)
+Completed 200 OK in 10180ms (Views: 9483.9ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 10:17:06 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (31.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (3866.2ms)
+  Rendered users/_edit.html.erb (7372.6ms)
+  Rendered users/edit.js.erb (11093.2ms)
+Completed 200 OK in 15493ms (Views: 15437.1ms | ActiveRecord: 31.2ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 10:17:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "birthday(4i)"=>"00", "birthday(5i)"=>"00", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (67.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (6.1ms)[0m  begin transaction
+  [1m[36mUser Exists (9.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mSQL (74.9ms)[0m  UPDATE "users" SET "birthday" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["birthday", "1982-03-03"], ["updated_at", "2016-03-01 01:17:39.844885"], ["id", 57]]
+  [1m[36m (95.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (49.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (105.1ms)
+  Rendered users/_save.js.erb (4058.7ms)
+  Rendered users/update.js.erb (7551.5ms)
+Completed 200 OK in 13200ms (Views: 11993.3ms | ActiveRecord: 302.0ms)
+
+
+Started GET "/users/57" for 10.0.80.54 at 2016-03-01 10:18:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (96.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_detail.html.erb (0.8ms)
+  Rendered users/show.js.erb (3529.2ms)
+Completed 200 OK in 8423ms (Views: 8306.9ms | ActiveRecord: 96.9ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 10:20:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (48.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (27.7ms)
+  Rendered users/_edit.html.erb (3516.0ms)
+  Rendered users/edit.js.erb (7317.7ms)
+Completed 200 OK in 12011ms (Views: 11951.1ms | ActiveRecord: 48.2ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 10:21:14 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (88.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (1.3ms)[0m  begin transaction
+  [1m[36mUser Exists (78.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mUser Load (26.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (99.1ms)
+  Rendered users/_save.js.erb (3922.6ms)
+  Rendered users/update.js.erb (7798.1ms)
+Completed 200 OK in 13241ms (Views: 12925.1ms | ActiveRecord: 195.1ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 10:22:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (69.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (138.1ms)
+  Rendered users/_edit.html.erb (3895.6ms)
+  Rendered users/edit.js.erb (7487.1ms)
+Completed 200 OK in 13392ms (Views: 13280.0ms | ActiveRecord: 69.1ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 10:25:52 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (34.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (198.5ms)
+  Rendered users/index.html.erb within layouts/application (416.5ms)
+Completed 200 OK in 3744ms (Views: 3707.3ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-03-01 10:25:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-03-01 10:25:58 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-03-01 10:25:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-03-01 10:26:00 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-03-01 10:26:02 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-269e34da52be310428d0aa7602164202dc6748cddd9cac37793ade4537c476f5.css?body=1" for 10.0.80.54 at 2016-03-01 10:26:03 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-03-01 10:26:04 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-03-01 10:26:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-03-01 10:26:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-fc967d5b89277d8bfd54a6e33c0d2167b0dd0df9e9ad840dabf5d82ef9f3a0e4.js?body=1" for 10.0.80.54 at 2016-03-01 10:26:08 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 10:26:12 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (140.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (201.3ms)
+  Rendered users/_edit.html.erb (3891.4ms)
+  Rendered users/edit.js.erb (8180.8ms)
+Completed 200 OK in 13411ms (Views: 13230.3ms | ActiveRecord: 140.5ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 10:27:31 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (149.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (281.6ms)
+  Rendered users/index.html.erb within layouts/application (1031.9ms)
+Completed 200 OK in 7345ms (Views: 7190.9ms | ActiveRecord: 149.3ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-03-01 10:27:40 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-03-01 10:27:42 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-03-01 10:27:44 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-269e34da52be310428d0aa7602164202dc6748cddd9cac37793ade4537c476f5.css?body=1" for 10.0.80.54 at 2016-03-01 10:27:46 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-03-01 10:27:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-03-01 10:27:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-03-01 10:27:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-03-01 10:27:55 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-03-01 10:27:58 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-fc967d5b89277d8bfd54a6e33c0d2167b0dd0df9e9ad840dabf5d82ef9f3a0e4.js?body=1" for 10.0.80.54 at 2016-03-01 10:27:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 11:46:06 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (24.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (124.2ms)
+  Rendered users/_edit.html.erb (6605.1ms)
+  Rendered users/edit.js.erb (13089.2ms)
+Completed 200 OK in 22932ms (Views: 21878.4ms | ActiveRecord: 142.2ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 11:46:39 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (86.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (1.5ms)[0m  begin transaction
+  [1m[36mUser Exists (100.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (17.6ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 624ms (ActiveRecord: 206.0ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:11:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (43.8ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (54.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (43.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1092.1ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 11:47:21 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"28", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (82.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (83.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 517ms (ActiveRecord: 166.5ms)
+
+NoMethodError (undefined method `[]' for Sun, 28 Feb 1982:Date):
+  app/models/user.rb:11:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (144.5ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (15.5ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (23.2ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (886.8ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 11:57:00 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (39.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (130.7ms)
+  Rendered users/_edit.html.erb (6665.0ms)
+  Rendered users/edit.js.erb (13246.7ms)
+Completed 200 OK in 22245ms (Views: 21123.4ms | ActiveRecord: 187.0ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 11:57:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (38.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (66.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36m (18.9ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 123.5ms)
+
+NoMethodError (undefined method `alert' for #<User:0xb39e74e8>):
+  app/models/user.rb:9:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (76.8ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (52.1ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (36.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (876.0ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 11:58:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (20.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (96.0ms)
+  Rendered users/_edit.html.erb (6278.0ms)
+  Rendered users/edit.js.erb (12481.7ms)
+Completed 200 OK in 21570ms (Views: 20624.7ms | ActiveRecord: 203.6ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 11:58:58 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (80.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (17.8ms)[0m  begin transaction
+  [1m[36mUser Exists (52.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 487ms (ActiveRecord: 151.1ms)
+
+NameError (undefined local variable or method `date_before_type_cast' for #<User:0xb3774d64>):
+  app/models/user.rb:8:in `date_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (83.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (28.2ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (24.2ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (796.3ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 11:59:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+Completed   in 2275ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 12:05:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (45.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (83.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (682.5ms)
+  Rendered users/index.html.erb within layouts/application (1553.0ms)
+Completed 200 OK in 27549ms (Views: 26320.0ms | ActiveRecord: 267.7ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-03-01 12:06:47 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-03-01 12:06:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-269e34da52be310428d0aa7602164202dc6748cddd9cac37793ade4537c476f5.css?body=1" for 10.0.80.54 at 2016-03-01 12:06:51 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-03-01 12:06:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-03-01 12:06:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-03-01 12:06:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-03-01 12:07:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-03-01 12:07:03 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-03-01 12:07:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-fc967d5b89277d8bfd54a6e33c0d2167b0dd0df9e9ad840dabf5d82ef9f3a0e4.js?body=1" for 10.0.80.54 at 2016-03-01 12:07:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 12:07:18 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (87.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (11342.9ms)
+  Rendered users/_edit.html.erb (17803.7ms)
+  Rendered users/edit.js.erb (24292.0ms)
+Completed 200 OK in 33852ms (Views: 32438.7ms | ActiveRecord: 87.3ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:15:52 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (72.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (82.8ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 2156ms (ActiveRecord: 156.1ms)
+
+NoMethodError (undefined method `birstday_valid?' for #<User:0xb3166c9c>):
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (255.1ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (30.4ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (15.1ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1195.2ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 12:16:31 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (397.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (1879.3ms)
+  Rendered users/index.html.erb within layouts/application (3303.0ms)
+Completed 200 OK in 14913ms (Views: 13079.5ms | ActiveRecord: 872.6ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-03-01 12:16:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-03-01 12:16:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-03-01 12:17:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-269e34da52be310428d0aa7602164202dc6748cddd9cac37793ade4537c476f5.css?body=1" for 10.0.80.54 at 2016-03-01 12:17:06 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-03-01 12:17:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-03-01 12:17:13 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-03-01 12:17:17 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-03-01 12:17:21 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-03-01 12:17:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-fc967d5b89277d8bfd54a6e33c0d2167b0dd0df9e9ad840dabf5d82ef9f3a0e4.js?body=1" for 10.0.80.54 at 2016-03-01 12:17:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 12:17:48 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (63.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (285.7ms)
+  Rendered users/_edit.html.erb (9011.7ms)
+  Rendered users/edit.js.erb (17896.1ms)
+Completed 200 OK in 30969ms (Views: 29237.6ms | ActiveRecord: 318.4ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:18:35 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (74.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (85.7ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36m (17.8ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 608ms (ActiveRecord: 178.2ms)
+
+NoMethodError (undefined method `birstday_valid?' for #<User:0xb2595b34>):
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (123.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (47.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (41.2ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1203.2ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 12:19:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (29.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (256.0ms)
+  Rendered users/_edit.html.erb (9210.0ms)
+  Rendered users/edit.js.erb (18131.6ms)
+Completed 200 OK in 30888ms (Views: 29445.6ms | ActiveRecord: 282.9ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:20:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (61.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (24.6ms)[0m  begin transaction
+  [1m[36mUser Exists (138.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (22.4ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 462ms (ActiveRecord: 247.3ms)
+
+NoMethodError (undefined method `alert' for #<User:0xb1a9e208>):
+  app/models/user.rb:6:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (43.4ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (39.5ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (15.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1154.5ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:20:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (39.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mUser Exists (92.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (6.3ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 1569ms (ActiveRecord: 409.7ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:9:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (155.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (50.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (23.8ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (937.7ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:21:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (51.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (126.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 1708ms (ActiveRecord: 272.3ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:9:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (62.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (34.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (37.2ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1252.1ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:22:31 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (64.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (39.9ms)[0m  begin transaction
+  [1m[36mUser Exists (36.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (6.3ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 1552ms (ActiveRecord: 471.4ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:7:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (57.2ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (33.8ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1083.6ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:23:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (32.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (122.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (25.4ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 1752ms (ActiveRecord: 412.2ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:8:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (152.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (31.5ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (36.8ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1276.1ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:24:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (99.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (65.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mUser Load (59.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (276.2ms)
+  Rendered users/_save.js.erb (9147.9ms)
+  Rendered users/update.js.erb (17940.2ms)
+Completed 200 OK in 31139ms (Views: 29048.4ms | ActiveRecord: 513.3ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 12:24:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (93.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (174.9ms)
+  Rendered users/_edit.html.erb (8724.2ms)
+  Rendered users/edit.js.erb (17526.5ms)
+Completed 200 OK in 29682ms (Views: 28598.4ms | ActiveRecord: 319.7ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:25:31 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (62.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (94.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36mUser Load (28.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (201.7ms)
+  Rendered users/_save.js.erb (9904.7ms)
+  Rendered users/update.js.erb (18733.1ms)
+Completed 200 OK in 30086ms (Views: 29635.8ms | ActiveRecord: 186.1ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 12:27:06 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (134.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (128.0ms)
+  Rendered users/_edit.html.erb (8756.4ms)
+  Rendered users/edit.js.erb (17766.6ms)
+Completed 200 OK in 30149ms (Views: 28852.4ms | ActiveRecord: 310.4ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:27:49 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (97.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (95.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+1982-03-03
+  [1m[35m (0.3ms)[0m  commit transaction
+  [1m[36mUser Load (111.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (299.7ms)
+  Rendered users/_save.js.erb (8563.7ms)
+  Rendered users/update.js.erb (17569.4ms)
+Completed 200 OK in 29451ms (Views: 28803.1ms | ActiveRecord: 304.3ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 12:29:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (115.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (140.1ms)
+  Rendered users/_edit.html.erb (9632.0ms)
+  Rendered users/edit.js.erb (20447.8ms)
+Completed 200 OK in 33936ms (Views: 32486.0ms | ActiveRecord: 252.2ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 12:30:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (91.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (143.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 1652ms (ActiveRecord: 501.4ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:7:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (80.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (23.5ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (5.4ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (810.4ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 13:51:06 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (75.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (63.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 520ms (ActiveRecord: 138.7ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:7:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (47.5ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (81.1ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (46.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1694.4ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 13:54:00 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (146.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (25.4ms)[0m  begin transaction
+  [1m[36mUser Exists (147.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 2541ms (ActiveRecord: 672.9ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:7:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (75.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (35.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (23.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1408.0ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 13:55:07 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (44.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (83.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 2253ms (ActiveRecord: 397.8ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:7:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (91.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (51.5ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (9.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1456.4ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 13:56:50 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (123.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (142.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+-------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 2692ms (ActiveRecord: 669.6ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:9:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (105.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (56.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (27.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1347.0ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 13:57:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (163.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (13.6ms)[0m  begin transaction
+  [1m[36mUser Exists (140.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+-------------
+1982-03-03
+-------------
+  [1m[35m (0.3ms)[0m  commit transaction
+  [1m[36mUser Load (104.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (496.6ms)
+  Rendered users/_save.js.erb (13337.5ms)
+  Rendered users/update.js.erb (28526.8ms)
+Completed 200 OK in 47316ms (Views: 44234.6ms | ActiveRecord: 1013.2ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 13:58:20 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (118.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (132.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+-------------
+Date
+-------------
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (224.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (537.3ms)
+  Rendered users/_save.js.erb (14171.5ms)
+  Rendered users/update.js.erb (34355.6ms)
+Completed 200 OK in 53740ms (Views: 51303.0ms | ActiveRecord: 743.5ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 13:59:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (76.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (76.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+-------------
+Date
+-------------
+  [1m[35m (28.9ms)[0m  commit transaction
+  [1m[36mUser Load (76.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (435.7ms)
+  Rendered users/_save.js.erb (12950.3ms)
+  Rendered users/update.js.erb (25091.4ms)
+Completed 200 OK in 42773ms (Views: 42175.2ms | ActiveRecord: 258.9ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 14:00:08 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (84.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (289.0ms)
+  Rendered users/_edit.html.erb (20353.6ms)
+  Rendered users/edit.js.erb (35140.3ms)
+Completed 200 OK in 55833ms (Views: 55640.0ms | ActiveRecord: 84.7ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 14:01:08 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (83.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (485.9ms)
+  Rendered users/_edit.html.erb (20386.6ms)
+  Rendered users/edit.js.erb (37692.6ms)
+Completed 200 OK in 64277ms (Views: 61496.0ms | ActiveRecord: 726.4ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 14:02:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (178.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (479.5ms)
+  Rendered users/index.html.erb within layouts/application (2140.0ms)
+Completed 200 OK in 17268ms (Views: 16965.7ms | ActiveRecord: 178.7ms)
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-03-01 14:02:45 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-269e34da52be310428d0aa7602164202dc6748cddd9cac37793ade4537c476f5.css?body=1" for 10.0.80.54 at 2016-03-01 14:02:52 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-03-01 14:02:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-03-01 14:03:04 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-03-01 14:03:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-03-01 14:03:14 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-03-01 14:03:19 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-03-01 14:03:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-03-01 14:03:31 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-fc967d5b89277d8bfd54a6e33c0d2167b0dd0df9e9ad840dabf5d82ef9f3a0e4.js?body=1" for 10.0.80.54 at 2016-03-01 14:03:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 14:04:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (142.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (985.1ms)
+  Rendered users/_edit.html.erb (18301.3ms)
+  Rendered users/edit.js.erb (31624.6ms)
+Completed 200 OK in 50464ms (Views: 50115.5ms | ActiveRecord: 142.7ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 14:06:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (102.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36m (73.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (98.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+-------------
+1982
+-------------
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (40.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (243.7ms)
+  Rendered users/_save.js.erb (13097.0ms)
+  Rendered users/update.js.erb (27404.5ms)
+Completed 200 OK in 46854ms (Views: 45905.1ms | ActiveRecord: 315.9ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 14:07:48 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (167.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (254.7ms)
+  Rendered users/_edit.html.erb (11640.0ms)
+  Rendered users/edit.js.erb (23336.0ms)
+Completed 200 OK in 41413ms (Views: 38480.5ms | ActiveRecord: 510.0ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 14:08:43 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (59.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (93.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36m (40.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (100.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (463.1ms)
+  Rendered users/_save.js.erb (11972.1ms)
+  Rendered users/update.js.erb (23835.7ms)
+Completed 200 OK in 38800ms (Views: 38070.0ms | ActiveRecord: 294.3ms)
+
+
+Started GET "/users/57" for 10.0.80.54 at 2016-03-01 14:09:33 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (122.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_detail.html.erb (76.1ms)
+  Rendered users/show.js.erb (12695.5ms)
+Completed 200 OK in 28945ms (Views: 28749.0ms | ActiveRecord: 122.0ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 14:10:15 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (41.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (237.2ms)
+  Rendered users/_edit.html.erb (11751.2ms)
+  Rendered users/edit.js.erb (24815.9ms)
+Completed 200 OK in 42936ms (Views: 40826.5ms | ActiveRecord: 398.4ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 14:11:10 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (70.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (163.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  Rendered users/error_notice.js.erb (28.2ms)
+Completed 200 OK in 17080ms (Views: 16475.9ms | ActiveRecord: 235.1ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 14:11:30 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"28", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (103.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mUser Exists (48.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (29.7ms)[0m  rollback transaction
+  Rendered users/error_notice.js.erb (0.2ms)
+Completed 200 OK in 16157ms (Views: 15539.8ms | ActiveRecord: 181.9ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 14:13:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"29", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (114.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (154.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (1.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (1.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (24.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (28.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (16.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (37.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (17.6ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (1.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (1.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (16.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (23.0ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (2.8ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (1.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (16.0ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (25.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (32.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (28.7ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (16.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (29.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (6.6ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (30.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (21.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (1.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (13.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (15.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (13.7ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.9ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (25.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (16.8ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (24.6ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (40.8ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (31.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (13.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (50.5ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 10042ms (ActiveRecord: 1183.4ms)
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/models/user.rb:11:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 14:20:24 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (124.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (68.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (18080.0ms)
+  Rendered users/_edit.html.erb (28650.9ms)
+  Rendered users/edit.js.erb (40199.7ms)
+Completed 200 OK in 61144ms (Views: 56865.9ms | ActiveRecord: 286.0ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 14:22:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (130.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mUser Exists (102.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 2773ms (ActiveRecord: 234.7ms)
+
+NoMethodError (undefined method `invalid?' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:11:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (209.4ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (45.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (10.5ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1453.0ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 14:25:47 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (102.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (245.7ms)
+  Rendered users/_edit.html.erb (11136.6ms)
+  Rendered users/edit.js.erb (22138.0ms)
+Completed 200 OK in 39436ms (Views: 37454.7ms | ActiveRecord: 481.5ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 14:29:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (207.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (126.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (78.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (328.2ms)
+  Rendered users/_save.js.erb (11545.3ms)
+  Rendered users/update.js.erb (22536.1ms)
+Completed 200 OK in 36992ms (Views: 36184.6ms | ActiveRecord: 413.6ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 14:30:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (74.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (354.2ms)
+  Rendered users/_edit.html.erb (12752.8ms)
+  Rendered users/edit.js.erb (23995.8ms)
+Completed 200 OK in 40184ms (Views: 38538.0ms | ActiveRecord: 421.3ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 14:32:14 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (168.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (258.5ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+-------------
+1982
+3
+3
+-------------
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (101.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (310.1ms)
+  Rendered users/_save.js.erb (14665.5ms)
+  Rendered users/update.js.erb (33060.9ms)
+Completed 200 OK in 51736ms (Views: 50617.4ms | ActiveRecord: 530.0ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 14:35:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (82.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (232.9ms)
+  Rendered users/_edit.html.erb (11805.6ms)
+  Rendered users/edit.js.erb (23604.5ms)
+Completed 200 OK in 39335ms (Views: 37627.3ms | ActiveRecord: 436.0ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 14:36:38 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (99.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (162.6ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+-------------
+1982-03-03
+1982
+3
+3
+-------------
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  Rendered users/error_notice.js.erb (1.0ms)
+Completed 200 OK in 15613ms (Views: 13564.4ms | ActiveRecord: 493.1ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 14:49:09 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (103.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (178.1ms)
+  Rendered users/_edit.html.erb (10616.5ms)
+  Rendered users/edit.js.erb (21027.5ms)
+Completed 200 OK in 37591ms (Views: 35897.5ms | ActiveRecord: 454.4ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 14:50:02 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (71.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (103.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 431ms (ActiveRecord: 175.7ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:8:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (110.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (39.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (1266.4ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 15:43:55 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (97.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (104.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (1363.5ms)
+  Rendered users/index.html.erb within layouts/application (3789.7ms)
+Completed 200 OK in 69749ms (Views: 66656.9ms | ActiveRecord: 442.6ms)
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-03-01 15:45:55 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-03-01 15:46:00 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-03-01 15:46:05 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-03-01 15:46:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-269e34da52be310428d0aa7602164202dc6748cddd9cac37793ade4537c476f5.css?body=1" for 10.0.80.54 at 2016-03-01 15:46:16 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-03-01 15:46:22 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-03-01 15:46:27 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-03-01 15:46:32 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-03-01 15:46:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-fc967d5b89277d8bfd54a6e33c0d2167b0dd0df9e9ad840dabf5d82ef9f3a0e4.js?body=1" for 10.0.80.54 at 2016-03-01 15:46:41 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 15:46:54 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (83.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (23933.5ms)
+  Rendered users/_edit.html.erb (38248.0ms)
+  Rendered users/edit.js.erb (53009.2ms)
+Completed 200 OK in 74728ms (Views: 71848.8ms | ActiveRecord: 83.9ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 15:48:28 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (171.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36mUser Load (116.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 577ms (ActiveRecord: 287.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'={"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}):
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (348.5ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (61.2ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (99.3ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (2260.1ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 15:52:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/mnt/ruby/master_table/app/controllers/users_controller.rb:43: syntax error, unexpected '(', expecting ')'
+    logger.debug(@user(user_params).birthday)
+                       ^):
+  app/controllers/users_controller.rb:43: syntax error, unexpected '(', expecting ')'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (210.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (98.7ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (141.0ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (2322.8ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 15:53:25 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (110.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+1982-03-03
+  [1m[36m (48.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (98.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36m (25.7ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 6113ms (ActiveRecord: 648.8ms)
+
+NoMethodError (undefined method `[]' for Wed, 03 Mar 1982:Date):
+  app/models/user.rb:8:in `birthday_valid?'
+  app/controllers/users_controller.rb:44:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (286.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (132.9ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (92.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (2353.7ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 15:54:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (77.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+1982-03-03
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (111.9ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (103.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_index.html.erb (572.1ms)
+  Rendered users/_save.js.erb (18351.9ms)
+  Rendered users/update.js.erb (37051.4ms)
+Completed 200 OK in 62073ms (Views: 58300.4ms | ActiveRecord: 672.0ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 15:55:12 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (277.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+---controller---
+1982-03-03
+  [1m[35m (1.6ms)[0m  begin transaction
+  [1m[36mUser Exists (175.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36mUser Load (214.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (600.6ms)
+  Rendered users/_save.js.erb (19021.2ms)
+  Rendered users/update.js.erb (34322.7ms)
+Completed 200 OK in 57402ms (Views: 53500.5ms | ActiveRecord: 1211.6ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 15:56:19 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+---model---
+  [1m[35mUser Load (71.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (514.2ms)
+  Rendered users/_edit.html.erb (22076.4ms)
+  Rendered users/edit.js.erb (40079.8ms)
+Completed 200 OK in 64391ms (Views: 61105.6ms | ActiveRecord: 689.9ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 15:58:04 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "birthday(1i)"=>"1982", "birthday(2i)"=>"2", "birthday(3i)"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (122.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+---controller---
+1982-03-03
+  [1m[35m (68.4ms)[0m  begin transaction
+  [1m[36mUser Exists (140.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mUser Load (719.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (1060.1ms)
+  Rendered users/_save.js.erb (16485.7ms)
+  Rendered users/update.js.erb (31750.8ms)
+Completed 200 OK in 52461ms (Views: 50668.3ms | ActiveRecord: 1051.8ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 16:31:56 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (261.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (1061.2ms)
+  Rendered users/_edit.html.erb (16373.1ms)
+  Rendered users/edit.js.erb (29904.8ms)
+Completed 200 OK in 51808ms (Views: 48519.1ms | ActiveRecord: 916.3ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 16:33:11 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "month"=>"2", "day"=>"29", "year"=>"1997", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (131.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+Unpermitted parameters: month, day, year
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mUser Exists (152.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  Rendered users/error_notice.js.erb (32.1ms)
+Completed 200 OK in 21509ms (Views: 20052.9ms | ActiveRecord: 284.4ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 16:34:04 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "month"=>"2", "day"=>"31", "year"=>"1997", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (88.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+Unpermitted parameters: month, day, year
+  [1m[35m (47.1ms)[0m  begin transaction
+  [1m[36mUser Exists (124.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  Rendered users/error_notice.js.erb (0.3ms)
+Completed 200 OK in 23255ms (Views: 22020.9ms | ActiveRecord: 260.5ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 16:34:36 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "month"=>"2", "day"=>"12", "year"=>"1997", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (150.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+Unpermitted parameters: month, day, year
+  [1m[35m (68.9ms)[0m  begin transaction
+  [1m[36mUser Exists (179.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  Rendered users/error_notice.js.erb (1.3ms)
+Completed 200 OK in 21469ms (Views: 20684.4ms | ActiveRecord: 399.8ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 16:40:40 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (106.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (520.8ms)
+  Rendered users/_edit.html.erb (17098.4ms)
+  Rendered users/edit.js.erb (33902.4ms)
+Completed 200 OK in 59453ms (Views: 56025.2ms | ActiveRecord: 520.5ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 16:41:59 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "year"=>"1996", "month"=>"2", "day"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (117.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+Unpermitted parameters: year, month, day
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 541ms (ActiveRecord: 118.1ms)
+
+NoMethodError (undefined method `validate_created_at' for #<User:0xb3c624ac>):
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (122.4ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (88.6ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (173.2ms)
+  Rendered /home/koguchi/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (2651.9ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 16:42:57 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (108.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (388.9ms)
+  Rendered users/_edit.html.erb (16413.9ms)
+  Rendered users/edit.js.erb (32184.8ms)
+Completed 200 OK in 57125ms (Views: 53495.8ms | ActiveRecord: 1159.4ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 16:44:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "year"=>"1996", "month"=>"2", "day"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (289.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+Unpermitted parameters: year, month, day
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (148.6ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  Rendered users/error_notice.js.erb (0.7ms)
+Completed 200 OK in 21881ms (Views: 20695.1ms | ActiveRecord: 439.0ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 16:45:00 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "year"=>"1996", "month"=>"2", "day"=>"24", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (114.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+Unpermitted parameters: year, month, day
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (176.8ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36m (53.7ms)[0m  [1mrollback transaction[0m
+  Rendered users/error_notice.js.erb (0.4ms)
+Completed 200 OK in 21054ms (Views: 20277.4ms | ActiveRecord: 345.4ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 16:46:26 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (182.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (335.6ms)
+  Rendered users/_edit.html.erb (17363.6ms)
+  Rendered users/edit.js.erb (34832.5ms)
+Completed 200 OK in 65044ms (Views: 64625.8ms | ActiveRecord: 182.2ms)
+
+
+Started GET "/" for 10.0.80.54 at 2016-03-01 16:47:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (144.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (780.3ms)
+  Rendered users/index.html.erb within layouts/application (2564.1ms)
+Completed 200 OK in 18485ms (Views: 18303.2ms | ActiveRecord: 144.4ms)
+
+
+Started GET "/assets/bootstrap.min.self-f85a9dff4531f3331c7880f4d02a4ecbb9ee2407d8bbb461f61dd45a4ff79784.css?body=1" for 10.0.80.54 at 2016-03-01 16:48:03 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-4967b0609475ec3ce5a186801f265e454bc9189b1fe2a4499580330b27073f58.css?body=1" for 10.0.80.54 at 2016-03-01 16:48:12 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 10.0.80.54 at 2016-03-01 16:48:17 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-269e34da52be310428d0aa7602164202dc6748cddd9cac37793ade4537c476f5.css?body=1" for 10.0.80.54 at 2016-03-01 16:48:23 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 10.0.80.54 at 2016-03-01 16:48:29 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.80.54 at 2016-03-01 16:48:34 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.0.80.54 at 2016-03-01 16:48:40 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.80.54 at 2016-03-01 16:48:46 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-03-01 16:48:52 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-fc967d5b89277d8bfd54a6e33c0d2167b0dd0df9e9ad840dabf5d82ef9f3a0e4.js?body=1" for 10.0.80.54 at 2016-03-01 16:48:58 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-fc967d5b89277d8bfd54a6e33c0d2167b0dd0df9e9ad840dabf5d82ef9f3a0e4.js?body=1" for 10.0.80.54 at 2016-03-01 16:49:37 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.80.54 at 2016-03-01 16:49:44 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 16:50:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (197.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (416.5ms)
+  Rendered users/_edit.html.erb (17572.1ms)
+  Rendered users/edit.js.erb (34274.1ms)
+Completed 200 OK in 56252ms (Views: 54015.9ms | ActiveRecord: 544.1ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 16:51:12 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "year"=>"1996", "month"=>"2", "day"=>"3", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (167.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+Unpermitted parameters: year, month, day
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mUser Exists (235.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  Rendered users/error_notice.js.erb (74.5ms)
+Completed 200 OK in 23672ms (Views: 22587.1ms | ActiveRecord: 403.2ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 17:01:01 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (100.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  Rendered users/_modal.html.erb (491.7ms)
+  Rendered users/_edit.html.erb (22436.1ms)
+  Rendered users/edit.js.erb (41895.8ms)
+Completed 200 OK in 68427ms (Views: 65749.6ms | ActiveRecord: 531.2ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 17:03:32 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "year"=>"1996", "month"=>"2", "day"=>"26", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[35mUser Load (164.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (107.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1
+  [1m[36mSQL (480.0ms)[0m  [1mUPDATE "users" SET "birthday" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["birthday", "1996-02-26"], ["updated_at", "2016-03-01 08:03:43.975891"], ["id", 57]]
+  [1m[35m (167.3ms)[0m  commit transaction
+  [1m[36mUser Load (132.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_index.html.erb (448.3ms)
+  Rendered users/_save.js.erb (18952.6ms)
+  Rendered users/update.js.erb (39547.2ms)
+Completed 200 OK in 66229ms (Views: 62204.1ms | ActiveRecord: 1512.4ms)
+
+
+Started GET "/users/57/edit" for 10.0.80.54 at 2016-03-01 17:04:53 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mUser Load (108.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 57]]
+  Rendered users/_modal.html.erb (371.9ms)
+  Rendered users/_edit.html.erb (21320.0ms)
+  Rendered users/edit.js.erb (37972.0ms)
+Completed 200 OK in 60825ms (Views: 60560.1ms | ActiveRecord: 108.3ms)
+
+
+Started PATCH "/users/57" for 10.0.80.54 at 2016-03-01 17:06:10 +0900
+Cannot render console from 10.0.80.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"emp_id"=>"1", "name"=>"三浦 奈々", "year"=>"1996", "month"=>"2", "day"=>"31", "phone1"=>"0943-62-4450", "phone2"=>"0911-31-3127", "post_number"=>"564-2598", "address"=>"西村市", "other"=>""}, "commit"=>"Save", "id"=>"57"}
+  [1m[36mUser Load (204.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 57]]
+  [1m[35m (1.4ms)[0m  begin transaction
+  [1m[36mUser Exists (106.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."emp_id" = '1' AND "users"."id" != 57) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  Rendered users/error_notice.js.erb (28.9ms)
+Completed 200 OK in 22262ms (Views: 21339.8ms | ActiveRecord: 312.9ms)

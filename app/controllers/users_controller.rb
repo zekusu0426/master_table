@@ -40,7 +40,6 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-
     if @user.update(user_params)
       @users = User.all
     else
@@ -77,6 +76,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:emp_id, :name, :birthday, :phone1, :phone2, :post_number, :address, :other)
+      params.require(:user).permit(:emp_id, :name, :birthday, :phone1, :phone2, :post_number, :address, :other, :year, :month, :day )
     end
 end
